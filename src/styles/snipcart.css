@@ -1,0 +1,90 @@
+/* MAIN ================================ */
+
+.snip-layout {
+    position: fixed;
+}
+
+.snip-layout .snip-layout__main-container {
+    background: #fff;
+    margin: 0 auto;
+    max-width: 62.25em;
+    position: relative;
+    border-radius: 15px;
+}
+
+#snipcart-main-container {
+    max-width: none;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* HEADER ================================ */
+
+#snipcart-header {
+    background-color: #efefef;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.snip-header__title {
+    font-weight: 100!important;
+    letter-spacing: 2px!important;
+}
+
+#snipcart-header-total {
+    background-color: transparent;
+    color: #555;
+}
+
+.snip-header__continue {
+    background-color: rgba(0,0,0,0.2)!important;
+    font-weight: 100!important;
+    letter-spacing: 1px;
+}
+
+/* BUTTONS ================================ */
+
+.snip-layout .snip-quantity-trigger__btn--minus:before {
+    background-color: transparent;
+}
+
+.snip-layout .snip-btn--highlight {
+    background-color: peru!important;
+    color: #efefef!important;
+    font-weight: 100!important;
+    letter-spacing: 1px;
+    
+}
+
+.snip-btn:hover {
+    box-shadow: 1px 1px 20px rgba(0,0,0,0.1)!important;
+    transform: scale(1.01);
+}
+
+.snip-layout .snip-ico--close:before {
+    color: #333;
+}
+
+
+/* FOOTER ================================ */
+
+.snip-footer {
+    background: #efefef!important;
+}
+
+
+
+
+
+
+
+
+
+/* RANDOM ================================ */
+
+.snip-product__description {
+    display: none;
+}
+
+
+
