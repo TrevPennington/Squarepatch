@@ -28,15 +28,16 @@ class BlogIndex extends React.Component {
         <SEO title="All items" />
       <ThumbnailsWrapper>
         {items.map(({ node }) => {
-          const { title, image, price, video } = node.frontmatter
+          const { title, price, video, gif } = node.frontmatter
           return (
             <ItemThumbnail
               key={node.fields.slug}
               link={node.fields.slug}
               heading={title}
-              image={image.publicURL}
+            
               price={price}
               video={video}
+              gif={gif.publicURL}
             />
           )
         })}
@@ -68,7 +69,7 @@ export const pageQuery = graphql`
             title
             price
             video 
-            image {
+            gif {
               publicURL
             }
           }

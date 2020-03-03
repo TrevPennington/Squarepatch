@@ -37,17 +37,17 @@ class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const siteName = "SquareCamp"
+    const siteName = "Squareforest"
     let header
 
     if (location.pathname === rootPath) { // TODO: give bigger section or add a big text component bc it is home
       header = (
-        <HeaderMinor shopName={siteName} font="2em" >
+        <HeaderMinor shopName={siteName} font="1.5em" >
         </HeaderMinor>
       )
     } else {
       header = (
-        <HeaderMinor shopName={siteName} font="1.3em" >
+        <HeaderMinor shopName={siteName} font="1em" >
         </HeaderMinor>
       )
     }

@@ -8,5 +8,5 @@ description: Animate your Squarespace Navigation bar links! Available for both S
 
 video: https://media.giphy.com/media/ghIdJMdGlYfbQyGRZu/giphy.gif
 
-gift: ./host.gif
+gif: ./nav.gif
 ---

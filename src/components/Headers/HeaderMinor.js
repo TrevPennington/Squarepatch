@@ -11,9 +11,12 @@ const HeaderMinorStyled = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    
 
     h1 {
         font-size: ${props => props.headSize || "2em"};
+        text-transform: uppercase;
+        letter-spacing: 5px;
     }
 `
 
