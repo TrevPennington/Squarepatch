@@ -4,19 +4,24 @@ import styled from "styled-components"
 
 const VideoStyled = styled.div `
     padding-top: 10px;
-    z-index: -1;
+    border: none;
 `
 
 const Video = ({ video }) => (
     <VideoStyled>
-        <iframe 
+        <video
             src={video}
+
+            autoplay='autoplay'
+            loop='true'
             width="330" 
             height="330" 
             scrolling='no'
-            frameBorder="0" 
-            class="giphy-embed" 
-            allowFullScreen
+           
+            loading='lazy'
+            muted='true'
+            style={{outline: `1px solid white`,
+            outlineOffset: `-1px`}}
         />
     </VideoStyled>
 )

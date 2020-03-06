@@ -6,7 +6,7 @@ import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 
 const FooterStyled = styled.div`
     width: 100%;
-    height: 30vh;
+    height: 15vh;
     background-color: ${props => props.theme.colors.indyMain};
     padding: 10px;
     text-align: center;
@@ -77,9 +77,9 @@ const ButtonStyled = styled.button`
 
 const CreatorStyled = styled.div`
     align-self: flex-start;
-    padding-top: 20px;
+    padding-top: 25px;
     width: 100px;
-    text-align: left;
+    text-align: right;
     p {
         font-size: 0.8em;
     }
@@ -90,17 +90,23 @@ const Footer = () => (
         <SocialStyled>
             <a href='https://www.pinterest.com/' style={{width:"30px"}}><Pinterest size="30px"/></a>
             <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a>
-            <CreatorStyled>
-                <p>created by <a href="#" style={{ color:'#555'}}>Trevor Pennington</a></p>
-            </CreatorStyled>
         </SocialStyled>
-        <NewsletterStyled>
+
+        <CreatorStyled>
+            <p>created by <a href="https://www.trevorpennington.com" style={{ color:'#555'}}>Trevor Pennington</a></p>
+        </CreatorStyled>
+
+
+
+        {/* TODO: connect to MailChimp API */}
+        {/* <NewsletterStyled>
             <p style={{ paddingBottom: '20px', width: '200px'}}>Sign up for %20 percent off first purchase! <p style={{ fontSize:'0.7em'}}>(we only send new products and coupons)</p></p>
             <form>
                 <InputStyled type='text' placeholder='email' />
                 <ButtonStyled><RightArrowAlt /></ButtonStyled>
             </form>
-        </NewsletterStyled>
+        </NewsletterStyled> */}
+
 
         
     </FooterStyled>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Squareforest`,
+    title: `Squarepatch`,
     author: `Trevor Pennington`,
     description: `A simple e-commerce shop using Gatsby and Snipcart.`,
     siteUrl: `https://gatsby-snipcart-starter.netlify.com/`,

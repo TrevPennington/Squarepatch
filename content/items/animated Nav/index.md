@@ -6,7 +6,7 @@ price: 7
 image: ./desert.jpg
 description: Animate your Squarespace Navigation bar links! Available for both Squarespace 7.0 & 7.1 official templates.
 
-video: https://media.giphy.com/media/ghIdJMdGlYfbQyGRZu/giphy.gif
+video: ./nav.mp4
 
 gif: ./nav.gif
 ---

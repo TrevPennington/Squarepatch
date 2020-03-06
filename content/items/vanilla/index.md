@@ -1,12 +1,12 @@
 ---
-title: Blog summary.09
+title: Blog hover
 date: 2019-06-19
 id: 6
 price: 7
 image: ./image1.jpg
-description: A delicious coffee flavoured treat. Use this on any camping occasion for maximum warmth. Ideal in temperatures below freezing. Do not use next to a campfire or around stoves.
+description: An interactive hover for blog index pages. 
 
-video: https://media.giphy.com/media/ghIdJMdGlYfbQyGRZu/giphy.gif
+video: ./BlogScale.mp4
 gif: ./newsletter.gif
 
 ---

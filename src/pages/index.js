@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
               heading={title}
             
               price={price}
-              video={video}
+              video={video.publicURL}
               gif={gif.publicURL}
             />
           )
@@ -68,7 +68,9 @@ export const pageQuery = graphql`
           frontmatter {
             title
             price
-            video 
+            video {
+              publicURL
+            }
             gif {
               publicURL
             }

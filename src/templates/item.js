@@ -117,8 +117,8 @@ class Item extends React.Component {
      
       <Layout location={this.props.location} title={siteTitle}>
         <div className='itemContainer'>
-          {/* <Video video={item.frontmatter.video} className='video' /> */}
-          <img src={item.frontmatter.gif.publicURL} alt='gif' className='gif' />
+          <Video video={item.frontmatter.video.publicURL} className='video' />
+          {/* <img src={item.frontmatter.gif.publicURL} alt='gif' className='gif' /> */}
           {/* <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price> */}
           <div class='info'>
             <Heading>{item.frontmatter.title}</Heading>
@@ -177,7 +177,9 @@ export const pageQuery = graphql`
         description
         price
         id
-        video
+        video {
+          publicURL
+        }
         gif {
           publicURL
         }

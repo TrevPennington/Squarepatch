@@ -6,6 +6,8 @@ import Footer from "../components/footer"
 
 import HeaderMain from './Headers/HeaderMain';
 import HeaderMinor from './Headers/HeaderMinor';
+import Cover from "./Headers/cover"
+import { ArrowDown } from "styled-icons/feather/ArrowDown"
 
 
 const PageWrapper = styled.div`
@@ -24,6 +26,10 @@ const ExternalLink = styled.a`
   color: #c59fc5;
 `
 
+const Arrow = styled(ArrowDown)`
+  margin-left: 30px;
+`
+
 
 class Layout extends React.Component {
 
@@ -37,13 +43,17 @@ class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    const siteName = "Squareforest"
+    const siteName = "Squarepatch"
     let header
 
     if (location.pathname === rootPath) { // TODO: give bigger section or add a big text component bc it is home
       header = (
-        <HeaderMinor shopName={siteName} font="1.5em" >
-        </HeaderMinor>
+        <>
+          <Cover />
+          <HeaderMinor shopName='plugins' font="1em" >
+          </HeaderMinor>
+          {/* <Arrow size='30px' color='#555' /> */}
+        </>
       )
     } else {
       header = (

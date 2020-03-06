@@ -73,8 +73,8 @@ const itemThumbnail = (props) => {
     return (
         <ItemThumbnailStyled>
             <LinkStyled to={props.link}>
-                {/* <Video video={props.video} /> */}
-                <Gif gif={props.gif} />
+                <Video video={props.video} />
+                {/* <Gif gif={props.gif} /> */}
                 <Title>
                 <Heading>{props.heading}</Heading>
                 <Price>${props.price.toFixed(2)}</Price>
