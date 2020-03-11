@@ -5,6 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const item = path.resolve(`./src/templates/item.js`)
+  const blog = path.resolve(`./src/templates/blog.js`)
   return graphql(
     `
       {
@@ -19,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                posttype
               }
             }
           }
@@ -37,6 +39,10 @@ exports.createPages = ({ graphql, actions }) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
 
+
+
+      if (post.node.frontmatter.posttype === 'product') { //products
+
       createPage({
         path: post.node.fields.slug,
         component: item,
@@ -46,6 +52,24 @@ exports.createPages = ({ graphql, actions }) => {
           next,
         },
       })
+
+    } else { //blog post
+      createPage({
+        path: post.node.fields.slug,
+        component: blog,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+
+
+    }
+
+
+
+
     })
 
     return null

@@ -16,7 +16,10 @@ const Heading = styled.h1`
   width: 100%;
   min-height: 45px;
   margin: auto;
+`
 
+const Shadow = styled.div`
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
 `
 
 const ImgStyled = styled(Img)`
@@ -68,15 +71,15 @@ const BuyButton = styled.button`
   font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: peru;
-  color: whitesmoke;
-  border: 2px solid peru;
+  background: ${props => props.theme.colors.indySplashing};
+  color: ${props => props.theme.colors.text};
+  border: 2px solid  transparent;
   transition-duration: 0.3s;
 
   &:hover {
-    background: #555;
-    color: whitesmoke;
-    border: 2px solid #555;
+    background: ${props => props.theme.colors.indySplashed};
+
+    border: 2px solid ${props => props.theme.colors.indySplashed};
     transition-duration: 0.3s;
   }
 
@@ -117,8 +120,9 @@ class Item extends React.Component {
      
       <Layout location={this.props.location} title={siteTitle}>
         <div className='itemContainer'>
+          <Shadow className='shadow'>
           <Video video={item.frontmatter.video.publicURL} className='video' />
-          {/* <img src={item.frontmatter.gif.publicURL} alt='gif' className='gif' /> */}
+          </Shadow>
           {/* <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price> */}
           <div class='info'>
             <Heading>{item.frontmatter.title}</Heading>

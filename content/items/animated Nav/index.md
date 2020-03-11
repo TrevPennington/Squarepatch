@@ -1,5 +1,6 @@
 ---
-title: Animated Nav.01
+posttype: 'product'
+title: Navigation animated underline
 date: 2019-06-19
 id: 99
 price: 7

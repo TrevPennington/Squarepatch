@@ -15,11 +15,16 @@ const ItemThumbnailStyled = styled.div`
     justify-content: center;
     margin: 20px;
     background: transparent;
-    transition-duration: .4s;
+    transition-duration: .15s;
 
     &:hover {
     transform: scale(1.02);
-    transition-duration: .4s;
+    box-shadow: 1px 1px 40px rgba(0,0,0,.15);
+    transition-duration: .15s;
+
+    .itemTitle {
+        background-color: ${props => props.theme.colors.indySplash};
+
     }
 `
 
@@ -66,7 +71,9 @@ const Title = styled.div`
     flex-direction: column nowrap;
     align-items: center;
     justify-content: space-between;
-
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    
 `
 
 const itemThumbnail = (props) => {
@@ -75,7 +82,7 @@ const itemThumbnail = (props) => {
             <LinkStyled to={props.link}>
                 <Video video={props.video} />
                 {/* <Gif gif={props.gif} /> */}
-                <Title>
+                <Title className='itemTitle'>
                 <Heading>{props.heading}</Heading>
                 <Price>${props.price.toFixed(2)}</Price>
                 </Title>

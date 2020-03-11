@@ -7,9 +7,13 @@ export const theme = {
         primaryAccent: 'white', //used for thumbnails on homepage and as price background
         secondaryAccent: '#999', //used for header border and item buttons
         splashColor: 'darkolivegreen',
+        text: '#333',
+
 
         indyMain: 'whitesmoke',
         indySecond: 'olivedrab',
-        indySplash: 'peru',
+        indySplash: 'rgba(205,133,63,0.3)',
+        indySplashing: 'rgba(205,133,63,0.6)',
+        indySplashed: 'rgba(205,133,63,1)',
     }
 };

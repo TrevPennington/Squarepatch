@@ -46,11 +46,11 @@ class Layout extends React.Component {
     const siteName = "Squarepatch"
     let header
 
-    if (location.pathname === rootPath) { // TODO: give bigger section or add a big text component bc it is home
+    if (location.pathname === rootPath || location === 'blog') { // TODO: give bigger section or add a big text component bc it is home
       header = (
         <>
           <Cover />
-          <HeaderMinor shopName='plugins' font="1em" >
+          <HeaderMinor shopName='plugins ⚡️' font="1.2em" >
           </HeaderMinor>
           {/* <Arrow size='30px' color='#555' /> */}
         </>

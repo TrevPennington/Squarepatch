@@ -1,29 +1,33 @@
 import React from "react"
 import styled from "styled-components";
+import { Link } from "gatsby"
 import { PinterestAlt } from 'styled-icons/boxicons-logos/PinterestAlt';
 import {Youtube } from 'styled-icons/feather/Youtube'
 import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 
 const FooterStyled = styled.div`
     width: 100%;
-    height: 15vh;
+    height: 20vh;
     background-color: ${props => props.theme.colors.indyMain};
-    padding: 10px;
     text-align: center;
 
     font-size: 0.9em;
     color: ${props => props.theme.colors.secondaryAccent};
 
-    display: flex;
-    flex-direction: column wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 20vw;
+
+    justify-content: center;
+    justify-items: center;
     align-items: center;
-    justify-content: space-between;
+
     padding-left: 5%;
     padding-right: 5%;
 `
 
 const SocialStyled = styled.div`
-    width: 200px;
     display: flex;
     flex-direction: column;
     padding-left: 50px;
@@ -75,10 +79,23 @@ const ButtonStyled = styled.button`
     }
 `
 
+const Links = styled.div`
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    grid-row-gap: 20px;
+    justify-content: space-between;
+    justify-items: space-between;
+    align-items: space-between;
+    
+
+    > * {
+    text-align: center;
+    text-transform: uppercase;
+    }
+`
+
 const CreatorStyled = styled.div`
-    align-self: flex-start;
-    padding-top: 25px;
-    width: 100px;
     text-align: right;
     p {
         font-size: 0.8em;
@@ -92,6 +109,11 @@ const Footer = () => (
             <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a>
         </SocialStyled>
 
+        <Links>
+            <Link to='./about'>About</Link>
+            <Link to='./contact'>Contact</Link>
+            <Link to='./blog'>Blog</Link>
+        </Links>
         <CreatorStyled>
             <p>created by <a href="https://www.trevorpennington.com" style={{ color:'#555'}}>Trevor Pennington</a></p>
         </CreatorStyled>

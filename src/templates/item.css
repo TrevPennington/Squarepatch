@@ -6,44 +6,41 @@
     margin-bottom: 200px;
 
     justify-items: center;
-
-
 }
 
 .info {
-    width: 150px;
     justify-self: start;
     align-self: center;
     text-align: left;
+    width: 330px;
+    height: 330px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.03);
 }
 
 .description {
     padding: 10px;
-    height: 50px;
-    width: 40vw;
-}
-
-.gif {
-    display: block;
-    width: 350px;
-    height: 350px;
-    outline: 1px solid white;
-    outline-offset: -1px;
+    height: auto;
+    width: 100%;
 }
 
 @media (max-width: 846px) {
+    .shadow {
+        margin-left: 50px;
+    }
+
     .itemContainer {
         justify-items: start;
     }
 
     .info {
-        padding-top: 50px;
-        padding-left: 50px;
-        width: 250px;
+        margin-top: 50px;
         margin-bottom: 50px;
+        margin-left: 50px;
     }
 
     .description {
-        width: 60vw;
+        width: 100%;
     }
 }

@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
         <SEO title="All items" />
       <ThumbnailsWrapper>
         {items.map(({ node }) => {
-          const { title, price, video, gif } = node.frontmatter
+          const { title, price, video } = node.frontmatter
           return (
             <ItemThumbnail
               key={node.fields.slug}
@@ -37,7 +37,6 @@ class BlogIndex extends React.Component {
             
               price={price}
               video={video.publicURL}
-              gif={gif.publicURL}
             />
           )
         })}
@@ -58,7 +57,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(items)/"  }}) {
       edges {
         node {
           excerpt
@@ -69,9 +68,6 @@ export const pageQuery = graphql`
             title
             price
             video {
-              publicURL
-            }
-            gif {
               publicURL
             }
           }
