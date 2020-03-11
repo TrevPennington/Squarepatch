@@ -5,6 +5,18 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogThumbnail from '../components/ItemThumbnail/BlogThumbnail';
 
+const Title = styled.h1`
+    width: auto;
+    margin: auto;
+    height: 15vh;
+    text-align: center;
+    
+    font-size: 2em;
+    letter-spacing: 3px;
+    font-style: italic;
+    text-transform: uppercase;
+`
+
 const ThumbnailsWrapper = styled.div`
     width: 100%;
     display: flex;
@@ -22,15 +34,17 @@ class Blog extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <Title>Articles</Title>
         <SEO title="All blogs" />
         <ThumbnailsWrapper>
         {items.map(({ node }) => {
-          const { title } = node.frontmatter
+          const { title, date } = node.frontmatter
           return (
             <BlogThumbnail
               key={node.fields.slug}
               link={node.fields.slug}
               heading={title}
+              date={date}
             />
           )
         })}
@@ -60,6 +74,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            date
           }
         }
       }

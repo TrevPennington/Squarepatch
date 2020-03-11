@@ -11,10 +11,13 @@ const Title = styled.h1`
     margin: auto;
     text-align: center;
     width: 100%;
+    margin-bottom: 65px;
 
     font-size: 2em;
     letter-spacing: 3px;
-    margin-bottom: 65px;
+    font-style: italic;
+    text-transform: uppercase;
+    
 `
 const InfoTitle = styled.h2`
     width: 75%;

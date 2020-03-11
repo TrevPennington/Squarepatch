@@ -24,10 +24,11 @@ const ShopName = styled.h1`
     padding: 20px;
     width: 50%;
     text-align: left;
-    font-family: sans-serif;
-    font-weight: 100;
-    letter-spacing: 3.5px;
-    text-transform: lowercase;
+
+    font-size: 2em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
     @media (max-width: 600px) {
         width: 100%;
       }

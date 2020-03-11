@@ -2,13 +2,12 @@
 posttype: 'product'
 title: Navigation quickscale
 date: 2019-06-19
-id: 90
-price: 7
+id: 005
+price: 11
 image: ./mongoose.jpg
-description: Modern rounded border newsletter signup option.
+description: Interactive hover for navigation items.
 
 video: ./nav02quickscale.mp4
-gif: ./BlogScale.gif
 
 ---
 

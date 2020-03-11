@@ -61,7 +61,7 @@ const Price = styled.p`
     font-weight: 300;
     font-size: .9em;
     padding-right: 10%;
-    
+    letter-spacing: 2px;
 `
 
 const Title = styled.div`
@@ -84,7 +84,7 @@ const itemThumbnail = (props) => {
                 {/* <Gif gif={props.gif} /> */}
                 <Title className='itemTitle'>
                 <Heading>{props.heading}</Heading>
-                <Price>${props.price.toFixed(2)}</Price>
+                <Price>${props.price}</Price>
                 </Title>
             </LinkStyled>
         </ItemThumbnailStyled>

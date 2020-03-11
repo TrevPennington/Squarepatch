@@ -13,7 +13,7 @@
     align-self: center;
     text-align: left;
     width: 330px;
-    height: 330px;
+    height: auto;
     padding: 20px;
     border-radius: 15px;
     background-color: rgba(0,0,0,0.03);

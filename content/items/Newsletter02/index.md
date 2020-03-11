@@ -1,15 +1,13 @@
 ---
 posttype: 'product'
-title: Newsletter.01
+title: Newsletter.02
 date: 2019-06-19
-id: 90
-price: 7
+id: 007
+price: 11
 image: ./mongoose.jpg
-description: Modern rounded border newsletter signup option.
+description: Minimalist newsletter signup option.
 
 video: ./Newsletter02.mp4
-gif: ./BlogScale.gif
-
 ---
 
 This is a gif

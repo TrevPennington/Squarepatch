@@ -91,6 +91,9 @@ const Links = styled.div`
 
     > * {
     text-align: center;
+    font-size: 1em;
+    letter-spacing: 2.5px;
+    font-style: italic;
     text-transform: uppercase;
     }
 `

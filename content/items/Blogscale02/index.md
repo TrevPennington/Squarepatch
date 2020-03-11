@@ -1,14 +1,13 @@
 ---
 posttype: 'product'
-title: Newsletter.01
+title: Blog Scale (image)
 date: 2019-06-19
-id: 90
-price: 7
+id: 003
+price: 11
 image: ./mongoose.jpg
-description: Modern rounded border newsletter signup option.
+description: Interactive scale for blog images on hover. 
 
 video: ./blogscaleInner.mp4
-gif: ./BlogScale.gif
 
 ---
 

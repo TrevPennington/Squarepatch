@@ -1,14 +1,13 @@
 ---
 posttype: 'product'
-title: Newsletter.01
+title: Modern Form
 date: 2019-06-19
-id: 90
-price: 7
+id: 004
+price: 11
 image: ./mongoose.jpg
-description: Modern rounded border newsletter signup option.
+description: Modern styling and interactive hover for user-built Squarespace forms. 
 
 video: ./Form01.mp4
-gif: ./BlogScale.gif
 
 ---
 

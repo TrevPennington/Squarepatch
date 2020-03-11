@@ -47,23 +47,6 @@ const LinkStyled = styled(Link)`
     justify-content: center;
 `
 
-const ImgStyled = styled.img`
-    width: auto;
-    height: 350px;
-
-    @media (max-width: 930px) {
-        height: 250px;
-      }
-`
-
-const Price = styled.p`
-    text-align: center;
-    font-weight: 300;
-    font-size: .9em;
-    padding-right: 10%;
-    
-`
-
 const Title = styled.div`
     width: 350px;
     height: 50px;
@@ -71,17 +54,17 @@ const Title = styled.div`
     flex-direction: column nowrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
     
 `
 
 const blogThumbnail = (props) => {
     return (
-        <ItemThumbnailStyled>
+        <ItemThumbnailStyled className='item'>
             <LinkStyled to={props.link}>
                 <Title className='itemTitle'>
                     <Heading>{props.heading}</Heading>
+                    {/* <h2>{props.date}</h2> */}
                 </Title>
             </LinkStyled>
         </ItemThumbnailStyled>
