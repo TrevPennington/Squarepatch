@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components";
 import { Link } from "gatsby"
-import { PinterestAlt } from 'styled-icons/boxicons-logos/PinterestAlt';
+// import { PinterestAlt } from 'styled-icons/boxicons-logos/PinterestAlt';
 import {Youtube } from 'styled-icons/feather/Youtube'
 import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 
@@ -33,11 +33,11 @@ const SocialStyled = styled.div`
     padding-left: 50px;
 `
 
-const Pinterest = styled(PinterestAlt)`
-    &:hover {
-        color: ${props => props.theme.colors.indySplash};
-    }
-`
+// const Pinterest = styled(PinterestAlt)`
+//     &:hover {
+//         color: ${props => props.theme.colors.indySplash};
+//     }
+// `
 
 const YoutubeStyled = styled(Youtube)`
     &:hover {
@@ -95,6 +95,9 @@ const Links = styled.div`
     letter-spacing: 2.5px;
     font-style: italic;
     text-transform: uppercase;
+    &:hover {
+        color: ${props => props.theme.colors.indySplash};
+    }
     }
 `
 
@@ -108,14 +111,14 @@ const CreatorStyled = styled.div`
 const Footer = () => (
     <FooterStyled>
         <SocialStyled>
-            <a href='https://www.pinterest.com/' style={{width:"30px"}}><Pinterest size="30px"/></a>
+            {/* <a href='https://www.pinterest.com/' style={{width:"30px"}}><Pinterest size="30px"/></a> */}
             <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a>
         </SocialStyled>
 
         <Links>
-            <Link to='./about'>About</Link>
-            <Link to='./contact'>Contact</Link>
             <Link to='./blog'>Blog</Link>
+            <Link to='./contact'>Contact</Link>
+            <Link to='./about'>About</Link>
         </Links>
         <CreatorStyled>
             <p>created by <a href="https://www.trevorpennington.com" style={{ color:'#555'}}>Trevor Pennington</a></p>

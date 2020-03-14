@@ -12,8 +12,11 @@ export const theme = {
 
         indyMain: 'whitesmoke',
         indySecond: 'olivedrab',
-        indySplash: 'rgba(205,133,63,0.3)',
-        indySplashing: 'rgba(205,133,63,0.6)',
+        indySplash: 'rgba(205,133,63,0.8)',
+        indySplashing: 'rgba(205,133,63,0.8)',
         indySplashed: 'rgba(205,133,63,1)',
+
+        highlight: 'antiquewhite',
+        highlighter: 'rgba(107, 142, 35, 0.6)'
     }
 };

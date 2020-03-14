@@ -22,7 +22,7 @@ const Square = styled.div`
 `
 
 const Title = styled.h4`
-    font-size: 3vw;
+    font-size: 2.2em;
     margin: auto;
     width: 100%;
     text-align: center;
@@ -32,13 +32,13 @@ const Title = styled.h4`
 `
 
 const Tag = styled.h5`
-    font-size: 0.8em;
+    font-size: 1em;
     margin: auto;
     width: 70%;
     text-align: center;
     letter-spacing: 1.7px;
-    padding-top: 15px;
-    line-height: 20px;
+    padding-top: 25px;
+    line-height: 35px;
 `
 
 export default () => (

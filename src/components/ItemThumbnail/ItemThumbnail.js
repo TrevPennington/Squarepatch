@@ -23,7 +23,7 @@ const ItemThumbnailStyled = styled.div`
     transition-duration: .15s;
 
     .itemTitle {
-        background-color: ${props => props.theme.colors.indySplash};
+        background-color: ${props => props.theme.colors.indySplashing};
 
     }
 `

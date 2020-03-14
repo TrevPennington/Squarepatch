@@ -27,6 +27,10 @@ module.exports = {
         name: `blog`,
       },
     },
+
+
+
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -34,13 +38,18 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 350,
             },
           },
           `gatsby-remark-copy-linked-files`,
         ],
       },
     },
+
+
+
+
+
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

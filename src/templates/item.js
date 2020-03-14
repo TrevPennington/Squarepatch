@@ -185,7 +185,7 @@ class Item extends React.Component {
             <p className='description'>{item.frontmatter.description}</p>
             <Breaker></Breaker>
             <FinePrint className='finePrint'>
-            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/about' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins.
+            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/about' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components.
             </FinePrint>
             <Question to='/contact'>questions?</Question>
           </div>
