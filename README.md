@@ -1,4 +1,4 @@
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3bd53cdc-7d81-46e0-979e-8f20c2a226f2/deploy-status)](https://app.netlify.com/sites/squarepatch/deploys)
 <h1 align="center">
   Gatsby and Snipcart e-commerce starter
 </h1>
