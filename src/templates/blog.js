@@ -93,8 +93,6 @@ class Blog extends React.Component {
   render() {
     const item = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    // const formatDate = date => moment.utc(date).format(config.dateFormat)
-    // const date = formatDate(item.frontmatter.date)
 
     return (
      
@@ -127,7 +125,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } })  {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fields {
         slug

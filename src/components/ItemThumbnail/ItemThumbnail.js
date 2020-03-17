@@ -23,8 +23,8 @@ const ItemThumbnailStyled = styled.div`
     transition-duration: .15s;
 
     .itemTitle {
-        background-color: ${props => props.theme.colors.indySplashing};
-
+        background-color: ${props => props.theme.colors.indySplashLight};
+        color: ${props => props.theme.colors.text};
     }
 `
 
@@ -32,7 +32,7 @@ const Heading = styled.h3`
     font-size: 1.1em;
     font-weight: 500;
     text-align: center;
-    padding-left: 15%;
+    padding-left: 7%;
    
 `
 
@@ -65,6 +65,9 @@ const Price = styled.p`
 `
 
 const Title = styled.div`
+    letter-spacing: 1.5px;
+    font-style: italic;
+
     width: 350px;
     height: 50px;
     display: flex;
@@ -73,7 +76,8 @@ const Title = styled.div`
     justify-content: space-between;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    
+    background-color: ${props => props.theme.colors.pastel};
+    color: ${props => props.theme.colors.text};
 `
 
 const itemThumbnail = (props) => {

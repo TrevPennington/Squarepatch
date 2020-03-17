@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: auto;
+
     padding-left: 30px;
     margin-bottom: 200px;
 
@@ -15,6 +16,7 @@
     width: 330px;
     height: auto;
     padding: 20px;
+    margin-top: 50px;
     border-radius: 15px;
     background-color: rgba(0,0,0,0.03);
 }
@@ -25,19 +27,22 @@
     width: 100%;
 }
 
-@media (max-width: 846px) {
+@media (max-width: 900px) {
     .shadow {
-        margin-left: 50px;
+        margin: auto;
     }
 
     .itemContainer {
-        justify-items: start;
+        justify-items: center;
+        padding-left: 0px;
+        margin: auto;
     }
 
     .info {
+        width: 330px;
+        margin: auto;
         margin-top: 50px;
         margin-bottom: 50px;
-        margin-left: 50px;
     }
 
     .description {

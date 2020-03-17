@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
 
 
 
-      if (post.node.frontmatter.posttype === 'product') { //products
+      if (post.node.frontmatter.posttype === 'product') { //product post
 
       createPage({
         path: post.node.fields.slug,
@@ -66,8 +66,6 @@ exports.createPages = ({ graphql, actions }) => {
 
 
     }
-
-
 
 
     })

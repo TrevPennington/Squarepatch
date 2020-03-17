@@ -1,6 +1,6 @@
 ---
 posttype: 'blog'
-path: '/Squarespace'
+slug: instructions
 title: 2020 Guide to Squarespace Plugins - 7.1 & 7.0
 date: March 03, 2020
 category: Guides

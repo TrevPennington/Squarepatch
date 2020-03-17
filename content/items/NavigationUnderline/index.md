@@ -1,6 +1,7 @@
 ---
 posttype: 'product'
-title: Navigation animated underline
+slug: navigation-underline
+title: Navigation Underline
 date: 2019-06-19
 id: 001
 price: 11

@@ -15,8 +15,12 @@ export const theme = {
         indySplash: 'rgba(205,133,63,0.8)',
         indySplashing: 'rgba(205,133,63,0.8)',
         indySplashed: 'rgba(205,133,63,1)',
+        indySplashLight: 'rgba(205,133,63,0.6)',
 
         highlight: 'antiquewhite',
-        highlighter: 'rgba(107, 142, 35, 0.6)'
+        highlighter: 'rgba(107, 142, 35, 0.6)',
+
+        pastel: 'rgba(0,0,0,0.08)',
+        pastelight: 'rgba(100,0,0,0.4)'
     }
 };

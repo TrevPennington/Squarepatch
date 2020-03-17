@@ -11,7 +11,7 @@ const Video = ({ video }) => (
     <VideoStyled>
         <video
             src={video}
-
+            playsinline='playsinline'
             autoplay='autoplay'
             loop='true'
             width="330" 

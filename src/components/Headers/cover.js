@@ -6,8 +6,7 @@ import logo from "./logo.svg";
 const Cover = styled.div`
     height: 85vh;
     width: 100%;
-    // background-image: linear-gradient(${props => props.theme.colors.indySplash}, white);
-    background-color: ${props => props.theme.colors.indyMain};
+    background-color: ${props => props.theme.colors.main};
 `
 
 const Logo = styled.svg`
@@ -32,20 +31,22 @@ const Title = styled.h4`
 `
 
 const Tag = styled.h5`
-    font-size: 1em;
+    font-size: 1.1em;
     margin: auto;
     width: 70%;
     text-align: center;
     letter-spacing: 1.7px;
-    padding-top: 25px;
+    padding-top: 70px;
     line-height: 35px;
 `
+
+
 
 export default () => (
     <Cover>
         <Square>
             <Title>SQUAREPATCH</Title>
-            <Tag>clean and simple plugins to make your Squarespace site unique.</Tag>
+            <Tag>clean and simple <em style={{ fontWeight: `600`, borderBottom: `2px solid peru`}}>Squarespace</em> plugins to make your site unique.</Tag>
         </Square>
         {/* <svg width="200" height="200">
             <rect x="30" y="30" width="200" height="200" />

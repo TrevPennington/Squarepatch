@@ -21,6 +21,7 @@ const Heading = styled.h1`
 const Shadow = styled.div`
   box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
   height: 350px;
+  margin-top: 50px;
 `
 
 const ImgStyled = styled(Img)`
@@ -185,7 +186,7 @@ class Item extends React.Component {
             <p className='description'>{item.frontmatter.description}</p>
             <Breaker></Breaker>
             <FinePrint className='finePrint'>
-            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/about' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components.
+            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components.
             </FinePrint>
             <Question to='/contact'>questions?</Question>
           </div>
@@ -226,7 +227,6 @@ export const pageQuery = graphql`
             }
           }
         }
-
       }
     }
   }

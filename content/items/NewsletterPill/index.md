@@ -1,9 +1,10 @@
 ---
 posttype: 'product'
-title: Newsletter.01
+slug: newsletter-pill
+title: Newsletter Pill
 date: 2019-06-19
 id: 006
-price: 11
+price: 8
 image: ./mongoose.jpg
 description: Modern rounded border newsletter signup option. Available for Squarespace 7.0 official templates only.
 

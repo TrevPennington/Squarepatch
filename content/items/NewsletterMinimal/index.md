@@ -1,9 +1,10 @@
 ---
 posttype: 'product'
-title: Newsletter.02
+slug: newsletter-minimal
+title: Newsletter Minimal
 date: 2019-06-19
 id: 007
-price: 11
+price: 8
 image: ./mongoose.jpg
 description: Minimalist newsletter signup option. Available for both Squarespace 7.0 & 7.1 official templates.
 

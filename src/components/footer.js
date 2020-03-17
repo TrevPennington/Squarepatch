@@ -8,11 +8,11 @@ import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 const FooterStyled = styled.div`
     width: 100%;
     height: 20vh;
-    background-color: ${props => props.theme.colors.indyMain};
+    background-color: ${props => props.theme.colors.text};
     text-align: center;
 
     font-size: 0.9em;
-    color: ${props => props.theme.colors.secondaryAccent};
+    color: ${props => props.theme.colors.indyMain};
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -30,7 +30,7 @@ const FooterStyled = styled.div`
 const SocialStyled = styled.div`
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
+    padding-left: 5%;
 `
 
 // const Pinterest = styled(PinterestAlt)`
@@ -103,6 +103,7 @@ const Links = styled.div`
 
 const CreatorStyled = styled.div`
     text-align: right;
+    padding-right: 5%;
     p {
         font-size: 0.8em;
     }
@@ -121,7 +122,7 @@ const Footer = () => (
             <Link to='./about'>About</Link>
         </Links>
         <CreatorStyled>
-            <p>created by <a href="https://www.trevorpennington.com" style={{ color:'#555'}}>Trevor Pennington</a></p>
+            <p>created by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></p>
         </CreatorStyled>
 
 

@@ -1,6 +1,7 @@
 ---
 posttype: 'product'
-title: Navigation quickscale
+slug: navigation-quickscale
+title: Navigation Quickscale
 date: 2019-06-19
 id: 005
 price: 11
