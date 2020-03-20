@@ -46,7 +46,7 @@ export default () => {
             <InfoTitle>{infoTitle}</InfoTitle>
             <Info>{info}</Info>
 
-            <form name='contact' method='POST' className='contactForm' netlify="true" >
+            <form name='contact' method='POST' className='contactForm' data-netlify="true" action='/success' >
                   <input type="hidden" name="inquiry" value="inquiry" />
     
                   <input id='f1' type='text' name='name' required 
