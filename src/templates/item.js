@@ -172,11 +172,12 @@ class Item extends React.Component {
               <BuyButton
                 className='snipcart-add-item'
                 data-item-id={item.frontmatter.id}
+                data-item-file-guid={item.frontmatter.guid}
                 data-item-price={item.frontmatter.price}
                 data-item-name={item.frontmatter.title}
                 data-item-description={item.frontmatter.description}
                 data-item-image={item.frontmatter.image.childImageSharp.fluid.src}
-                data-item-url={"https://gatsby-snipcart-starter.netlify.com" + item.fields.slug} //REPLACE WITH OWN URL
+                data-item-url={"https://www.squarepatch.io/" + item.fields.slug} //REPLACE WITH OWN URL
                 // data-item-custom1-name={item.frontmatter.customField ? item.frontmatter.customField.name : null}
                 // data-item-custom1-options={this.createString(item.frontmatter.customField.values)}
                 // data-item-custom1-value={this.state.selected}>
@@ -186,7 +187,7 @@ class Item extends React.Component {
             <p className='description'>{item.frontmatter.description}</p>
             <Breaker></Breaker>
             <FinePrint className='finePrint'>
-            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components.
+            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components. All plugins are non-refundable due to the nature of the product. If you have any problems or questions, please <Link to='/contact' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>contact us!</Link>
             </FinePrint>
             <Question to='/contact'>questions?</Question>
           </div>
@@ -216,6 +217,7 @@ export const pageQuery = graphql`
         description
         price
         id
+        guid
         video {
           publicURL
         }

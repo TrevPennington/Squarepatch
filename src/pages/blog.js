@@ -18,12 +18,15 @@ const Title = styled.h1`
 `
 
 const ThumbnailsWrapper = styled.div`
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
+
+    height: 20vh; //TODO: change when add more blogs
+    margin-bottom: 40vh;
 `
 
 class Blog extends React.Component {

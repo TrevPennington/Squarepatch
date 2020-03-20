@@ -50,14 +50,14 @@ class Layout extends React.Component {
       header = (
         <>
           <Cover />
-          <HeaderMinor shopName='plugins ⚡️' font="1.2em" >
+          <HeaderMinor shopName='plugins ⚡️' font="1.2em" background='transparent' >
           </HeaderMinor>
           {/* <Arrow size='30px' color='#555' /> */}
         </>
       )
     } else {
       header = (
-        <HeaderMinor shopName={siteName} font="1em" >
+        <HeaderMinor shopName={siteName} font="1em" background={props => props.theme.colors.main} >
         </HeaderMinor>
       )
     }

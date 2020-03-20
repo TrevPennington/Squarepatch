@@ -10,8 +10,9 @@ const HeaderMinorStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: ${props => props.background || "transparent"};
 
     h1 {
         font-size: ${props => props.headSize || "2em"};
@@ -22,6 +23,7 @@ const HeaderMinorStyled = styled.div`
 
 const ShopName = styled.h1`
     padding: 20px;
+    padding-left: 60px;
     width: 50%;
     text-align: left;
 
@@ -69,8 +71,11 @@ class HeaderMinor extends Component {
         this.setState({ items: qty })
     }
 
+
+
     componentDidMount() {
         if (window.Snipcart) {
+
             //this allows it to work when switching pages
             var count = window.Snipcart.api.items.count();
             this.updateItemTotal(count)
@@ -97,7 +102,7 @@ class HeaderMinor extends Component {
 
     render() {
         return (
-            <HeaderMinorStyled headSize={this.props.font}>
+            <HeaderMinorStyled headSize={this.props.font} background={this.props.background}>
                 <ShopName>
                     <LinkStyled to='/'>
                         {this.props.shopName}

@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components";
 import { Link } from "gatsby"
-// import { PinterestAlt } from 'styled-icons/boxicons-logos/PinterestAlt';
+import { PinterestAlt } from 'styled-icons/boxicons-logos/PinterestAlt';
 import {Youtube } from 'styled-icons/feather/Youtube'
 import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 
 const FooterStyled = styled.div`
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     background-color: ${props => props.theme.colors.text};
     text-align: center;
 
@@ -33,11 +33,11 @@ const SocialStyled = styled.div`
     padding-left: 5%;
 `
 
-// const Pinterest = styled(PinterestAlt)`
-//     &:hover {
-//         color: ${props => props.theme.colors.indySplash};
-//     }
-// `
+const Pinterest = styled(PinterestAlt)`
+    &:hover {
+        color: ${props => props.theme.colors.indySplash};
+    }
+`
 
 const YoutubeStyled = styled(Youtube)`
     &:hover {
@@ -104,25 +104,26 @@ const Links = styled.div`
 const CreatorStyled = styled.div`
     text-align: right;
     padding-right: 5%;
-    p {
-        font-size: 0.8em;
+    h1 {
+        font-size: 0.9em;
     }
 `
 
 const Footer = () => (
     <FooterStyled>
         <SocialStyled>
-            {/* <a href='https://www.pinterest.com/' style={{width:"30px"}}><Pinterest size="30px"/></a> */}
-            <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a>
+            <a href='https://www.pinterest.com/thepenningtonco/web-design/' style={{width:"30px"}}><Pinterest size="30px"/></a>
+            {/* <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a> */}
         </SocialStyled>
 
         <Links>
+            <Link to='./'>Plugins</Link>
             <Link to='./blog'>Blog</Link>
             <Link to='./contact'>Contact</Link>
             <Link to='./about'>About</Link>
         </Links>
         <CreatorStyled>
-            <p>created by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></p>
+            <h1>created by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></h1>
         </CreatorStyled>
 
 

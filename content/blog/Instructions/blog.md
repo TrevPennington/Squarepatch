@@ -43,5 +43,6 @@ Navigate to <em>Design</em> in the main editor menu and click on <em>Custom CSS<
 <br />
 
 <img src="/images/Custom CSS.png" />
-
-All done!
+<br />
+<br />
+<em>All done!</em>
