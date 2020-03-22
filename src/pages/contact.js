@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components";
 import "./contact.css";
-import SEO from "../components/SEO"
+import SEO from "../components/seo"
 
 const infoTitle = 'Questions / Comments / Concerns'
 const info = 'Leave a short message below with a title and we will get back to you as soon as possible! We aim for 24 hours.'
