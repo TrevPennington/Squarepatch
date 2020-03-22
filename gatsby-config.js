@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Squarepatch`,
     author: `Trevor Pennington`,
-    description: `A simple e-commerce shop using Gatsby and Snipcart.`,
-    siteUrl: `https://gatsby-snipcart-starter.netlify.com/`,
+    description: `Simple Squarespace plugins`,
+    siteUrl: `https://www.squarepatch.io/`,
   },
   plugins: [
     {
@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Snipcart Starter`,
-        short_name: `Gatsby Snipcart`,
+        name: `Squarepatch for Squarespace plugins`,
+        short_name: `Squarepatch`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `thistle`,

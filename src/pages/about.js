@@ -1,8 +1,10 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import styled from "styled-components";
 import Img from "gatsby-image"
+
 
 const info = 'Squarepatch was born out of a desire to brand Squarespace websites beyond the standard templates. We believe all websites owners should be able to customize styles to their liking. We welcome all suggestions for plugins and love creating custom style plugins for all who ask!'
 
@@ -50,6 +52,7 @@ export default () => {
     
     return (
         <Layout location = 'about'>
+          <SEO title='About Squarepatch' />
             <div className='aboutContainer'>
                 <Title>about</Title>
                 <Info>{info}</Info>

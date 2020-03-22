@@ -6,7 +6,7 @@ import logo from "./logo.svg";
 const Cover = styled.div`
     height: 85vh;
     width: 100%;
-    background-color: ${props => props.theme.colors.main};
+    background-color: ${props => props.theme.colors.cover};
 `
 
 const Logo = styled.svg`
@@ -18,26 +18,44 @@ const Logo = styled.svg`
 
 const Square = styled.div`
     margin: auto;
+
+    & > * {
+        color: ${props => props.theme.colors.text};
+    }
 `
 
 const Title = styled.h4`
-    font-size: 2.2em;
+    color: ${props => props.theme.colors.text};
+
+    font-size: 2.5em;
     margin: auto;
     width: 100%;
     text-align: center;
     padding-top: 30vh;
-    letter-spacing: 5px;
+    letter-spacing: 15px;
     font-weight: 500;
+
+
+    @media(max-width: 900px) {
+        font-size: 1.5em;
+       
+    }
 `
 
 const Tag = styled.h5`
-    font-size: 1.1em;
+    font-size: 1em;
     margin: auto;
     width: 70%;
     text-align: center;
     letter-spacing: 1.7px;
     padding-top: 70px;
     line-height: 35px;
+   
+
+    @media(max-width: 900px) {
+        font-size: 0.8em;
+       
+    }
 `
 
 

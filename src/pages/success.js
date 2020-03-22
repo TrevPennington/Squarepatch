@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const SuccessWrapper = styled.div`
     height: 70vh;
@@ -26,6 +27,7 @@ const Success = styled.h1`
 export default () => {
     return (
         <Layout location='/success'>
+            <SEO title="Contact Success" />
             <SuccessWrapper>
                 <Success>
                     Thanks for reaching out! We will get back to you ASAP. <em><Link to='/'>Home</Link></em>

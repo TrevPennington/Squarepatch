@@ -10,8 +10,12 @@ import './item.css'
 import Layout from "../components/layout";
 
 const Heading = styled.h1`
-  font-size: 1.8em;
-  font-weight: 400;
+  font-style: italic;
+  font-size: 1.4em;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+
   text-align: left;
   width: 100%;
   min-height: 45px;

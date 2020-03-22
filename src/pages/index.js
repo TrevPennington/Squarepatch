@@ -25,7 +25,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All items" />
+        <SEO title="Squarespace Plugins" />
       <ThumbnailsWrapper>
         {items.map(({ node }) => {
           const { title, price, video } = node.frontmatter

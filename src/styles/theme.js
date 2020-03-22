@@ -21,6 +21,9 @@ export const theme = {
         highlighter: 'rgba(107, 142, 35, 0.6)',
 
         pastel: 'rgba(0,0,0,0.08)',
-        pastelight: 'rgba(100,0,0,0.4)'
+        pastelight: 'rgba(100,0,0,0.4)',
+
+        cover: '#efefef',
+        
     }
 };

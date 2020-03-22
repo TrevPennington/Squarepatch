@@ -66,7 +66,10 @@ const Price = styled.p`
 
 const Title = styled.div`
     letter-spacing: 1.5px;
+    
     font-style: italic;
+    font-size: 0.8em;
+    text-transform: uppercase;
 
     width: 350px;
     height: 50px;
