@@ -17,7 +17,7 @@ const FooterStyled = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 20vw;
+    grid-column-gap: 10vw;
 
     justify-content: center;
     justify-items: center;

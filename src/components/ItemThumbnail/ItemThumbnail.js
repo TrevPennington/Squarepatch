@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components"
 import { Link } from "gatsby";
 import Video from "../video"
-import Gif from "../gif"
 
 
 const ItemThumbnailStyled = styled.div`
@@ -18,7 +17,7 @@ const ItemThumbnailStyled = styled.div`
     transition-duration: .15s;
 
     &:hover {
-    transform: scale(1.02);
+    // transform: scale(1.01);
     box-shadow: 1px 1px 40px rgba(0,0,0,.15);
     transition-duration: .15s;
 
@@ -88,7 +87,6 @@ const itemThumbnail = (props) => {
         <ItemThumbnailStyled>
             <LinkStyled to={props.link}>
                 <Video video={props.video} />
-                {/* <Gif gif={props.gif} /> */}
                 <Title className='itemTitle'>
                 <Heading>{props.heading}</Heading>
                 <Price>${props.price}</Price>

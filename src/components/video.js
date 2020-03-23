@@ -21,7 +21,7 @@ const Video = ({ video }) => (
             loading='lazy'
             muted='true'
             style={{outline: `1px solid white`,
-            outlineOffset: `-1px`}}
+            outlineOffset: `-1px` }}
         />
     </VideoStyled>
 )

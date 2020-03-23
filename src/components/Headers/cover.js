@@ -37,8 +37,7 @@ const Title = styled.h4`
 
 
     @media(max-width: 900px) {
-        font-size: 1.5em;
-       
+        font-size: 1.3em;
     }
 `
 
@@ -54,7 +53,6 @@ const Tag = styled.h5`
 
     @media(max-width: 900px) {
         font-size: 0.8em;
-       
     }
 `
 
