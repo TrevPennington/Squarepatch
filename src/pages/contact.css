@@ -86,7 +86,6 @@ input:focus, textarea:focus {
     font-size: .75em;
     letter-spacing: 1px;
 
-    border-radius: 30px;
 }
 
 .submitForm:hover {

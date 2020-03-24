@@ -6,7 +6,7 @@ import "./contact.css";
 import SEO from "../components/seo"
 
 const infoTitle = 'Questions / Comments / Concerns'
-const info = 'Leave a short message below with a title and we will get back to you as soon as possible! We aim for 24 hours.'
+const info = 'Contact us about plugin questions, ideas for new plugins, site feedback, custom code quotes, or even just to say hello. Leave a short message below with a title and we will get back to you as soon as possible! We aim for 24 hours.'
 
 const Title = styled.h1`
     margin: auto;
@@ -21,7 +21,7 @@ const Title = styled.h1`
     
 `
 const InfoTitle = styled.h2`
-    width: 75%;
+    width: 50%;
     margin: auto;
     text-align: left;
 
@@ -32,7 +32,7 @@ const InfoTitle = styled.h2`
 ` 
 
 const Info = styled.p`
-    width: 75%;
+    width: 50%;
     margin: auto;
 
     font-size: 0.9em;
