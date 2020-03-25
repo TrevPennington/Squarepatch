@@ -105,9 +105,13 @@ const CreatorStyled = styled.div`
     text-align: right;
     padding-right: 5%;
     h1 {
-        font-size: 0.9em;
+        font-size: 0.8em;
+        color: #888;
+        letter-spacing: 1px;
     }
 `
+
+const currentDate = new Date();
 
 const Footer = () => (
     <FooterStyled>
@@ -123,6 +127,7 @@ const Footer = () => (
             <Link to='./about'>About</Link>
         </Links>
         <CreatorStyled>
+            <h1>© Squarepatch Designs {currentDate.getFullYear()}</h1>
             <h1>created by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></h1>
         </CreatorStyled>
 

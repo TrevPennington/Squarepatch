@@ -71,7 +71,7 @@ module.exports = {
         icon: `content/assets/squarepatchicon.png`,
       },
     },
-    `gatsby-plugin-offline`,
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-snipcart',
