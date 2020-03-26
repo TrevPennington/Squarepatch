@@ -7,6 +7,7 @@ import styled from "styled-components"
 import ItemThumbnail from '../components/ItemThumbnail/ItemThumbnail';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Helmet } from "react-helmet"
 
 const ThumbnailsWrapper = styled.div`
     width: 100%;
@@ -26,6 +27,9 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Squarespace Plugins" />
+        <Helmet>
+          <meta name="p:domain_verify" content="27337b2b76d4bc3a71ba86bab3a29e89"/>
+        </Helmet>
       <ThumbnailsWrapper>
         {items.map(({ node }) => {
           const { title, price, video } = node.frontmatter
