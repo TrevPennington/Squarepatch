@@ -47,7 +47,11 @@
     line-height: 20px;
 }
 
-::placeholder, #f4{
+#f9 {
+    padding-top: 8px;
+}
+
+::placeholder, #f4 {
     color: var(--form-font);
     opacity: 1;
 

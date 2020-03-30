@@ -7,7 +7,7 @@ category: Guides
 author: Trevor Pennington
 ---
 
-This guide will explain how to add any CSS plugin <a href='/animated%20Nav/'>(like this Squarepatch one)</a> to Squarespace official templates (7.1 & 7.0).
+This guide will explain how to add any CSS plugin <a href='https://www.squarepatch.io/NavigationUnderline/'>(like this Squarepatch one)</a> to Squarespace official templates (7.1 & 7.0).
 <br />
 <br />
 

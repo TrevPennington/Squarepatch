@@ -117,14 +117,6 @@ const FinePrint = styled.p`
   color: #777;
 `
 
-const Question = styled(Link)`
-  padding: 10px;
-  font-size: 0.9em;
-  color: #222;
-  font-style: italic;
-  font-weight: 500;
-`
-
 class Item extends React.Component {
   // state = {
   //   selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name
@@ -193,7 +185,6 @@ class Item extends React.Component {
             <FinePrint className='finePrint'>
             **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components. All plugins are non-refundable due to the nature of the product. If you have any problems or questions, please <Link to='/contact' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>contact us!</Link>
             </FinePrint>
-            <Question to='/contact'>questions?</Question>
           </div>
         </div>
       </Layout>

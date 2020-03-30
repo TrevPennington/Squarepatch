@@ -61,6 +61,8 @@ export default () => {
                   <textarea id='f5' id='message' name='message' required
                     placeholder="message*"></textarea>
 
+                  <textarea id='f9' name='source' placeholder='how did you find us?!'></textarea>
+
                   <button id='f8' type='submit' className='submitForm' name='submit'>
                     submit!</button>
            
