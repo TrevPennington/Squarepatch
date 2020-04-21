@@ -48,7 +48,7 @@ const Body = styled.div`
   }
 `
 
-const Text = styled.p`
+const Text = styled.div`
 
 
   & > * {

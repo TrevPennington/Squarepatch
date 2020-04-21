@@ -6,40 +6,75 @@ import { Link } from "gatsby";
 import { ShoppingBag } from 'styled-icons/boxicons-regular/ShoppingBag';
 
 const HeaderMinorStyled = styled.div`
+    top: 0;
+    position: sticky;
+    box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
     width: 100%;
+    margin: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    z-index: 99;
+    background-color: white;
+`
+
+const Div = styled.div`
+    width: 75vw;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background-color: ${props => props.background || "transparent"};
 
-    h1 {
-        font-size: ${props => props.headSize || "2em"};
-        text-transform: uppercase;
-        letter-spacing: 5px;
+    @media(max-width: 600px) {
+        width: 90vw;
     }
 `
 
-const ShopName = styled.h1`
-    padding: 20px;
-    padding-left: 60px;
-    width: 50%;
+const Home = styled.h1`
+    
+    font-size: 1.4em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
     text-align: left;
 
+`
+
+const Links = styled.div`
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     font-size: 2em;
     letter-spacing: 3px;
-    text-transform: uppercase;
 
-    @media (max-width: 600px) {
-        width: 100%;
-      }
+    & > * {
+        font-size: 0.5em;
+    }
+    @media(max-width: 600px) {
+        justify-content: flex-end;
+    }
+`
+
+const LinkHome = styled(Link)`
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+    @media(max-width: 600px) {
+        font-size: 0.6em;
+        font-weight: 400;
+        align-self: center;
+    }
 `
 
 const LinkStyled = styled(Link)`
     box-shadow: none;
     text-decoration: none;
     color: inherit;
+
+    @media(max-width: 600px) {
+        font-size: 0.3em;
+        margin-right: 3vw;
+        align-self: center;
+    }
 `
 
 const CartSummary = styled.div`
@@ -48,6 +83,7 @@ const CartSummary = styled.div`
     flex-direction: column;
     align-items: center;
     padding-right: 30px;
+    padding-top: 3px;
 `
 
 const ItemCount = styled.p`
@@ -58,7 +94,7 @@ const ItemCount = styled.p`
     text-align: center;
     font-size: 1em;
     color: whitesmoke;
-    transform: translateY(-12px);
+    transform: translateY(-15px);
     z-index: 999;
 `
 
@@ -103,17 +139,33 @@ class HeaderMinor extends Component {
     render() {
         return (
             <HeaderMinorStyled headSize={this.props.font} background={this.props.background}>
-                <ShopName>
-                    <LinkStyled to='/'>
-                        {this.props.shopName}
-                    </LinkStyled>
-                </ShopName>
-                <CartSummary className="snipcart-summary">
-                    <a href="#" className="snipcart-checkout"> 
-                    <ShoppingBag size='40px' color='#555' />
-                    <ItemCount className='itemCount'>{this.state.items}</ItemCount>
-                    </a>
-                </CartSummary>
+                <Div>
+                    <Home>
+                        <LinkHome to='/'>
+                            Squarepatch
+                        </LinkHome>
+                    </Home>
+
+                    <Links>
+                        <LinkStyled to='/blog'>
+                            <p>BLOG</p>
+                        </LinkStyled>
+
+                        <LinkStyled to='/about'>
+                            <p>ABOUT</p>
+                        </LinkStyled>
+                    
+                
+
+                        <CartSummary className="snipcart-summary">
+                            <a href="#" className="snipcart-checkout"> 
+                            <ShoppingBag size='40px' color='#555' />
+                            <ItemCount className='itemCount'>{this.state.items}</ItemCount>
+                            </a>
+                        </CartSummary>
+                    </Links>
+
+                </Div>
 
             </HeaderMinorStyled>
         )

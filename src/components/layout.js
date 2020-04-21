@@ -13,8 +13,6 @@ import { ArrowDown } from "styled-icons/feather/ArrowDown"
 const PageWrapper = styled.div`
   width: 100%;
   margin: 0 auto;
-  width: 100%;
-
 `
 
 const MainSection = styled.main`
@@ -49,10 +47,10 @@ class Layout extends React.Component {
     if (location.pathname === rootPath || location === 'blog') { // TODO: give bigger section or add a big text component bc it is home
       header = (
         <>
-          <Cover />
-          <HeaderMinor shopName='plugins ⚡️' font="1.2em" background='transparent' >
+          <HeaderMinor shopName='plugins ⚡️' font="1.2em" background='transparent'>
           </HeaderMinor>
-          {/* <Arrow size='30px' color='#555' /> */}
+          
+          <Cover />
         </>
       )
     } else {
