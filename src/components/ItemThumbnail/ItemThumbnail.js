@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components"
 import { Link } from "gatsby";
 import Video from "../video"
@@ -62,6 +62,11 @@ const Price = styled.p`
     padding-right: 10%;
     letter-spacing: 2px;
 `
+const Free = styled(Price)`
+    color: ${props => props.theme.colors.indySecond};
+    font-weight: 600;
+    font-size: 1.2em;
+`
 
 const Title = styled.div`
     letter-spacing: 1.5px;
@@ -82,18 +87,33 @@ const Title = styled.div`
     color: ${props => props.theme.colors.text};
 `
 
-const itemThumbnail = (props) => {
+class itemThumbnail extends React.Component {
+render() {
+    let priceCheck = () => {
+        if(this.props.price == 0) {
+            return (
+                <Free>FREE</Free>
+            )
+        } else {
+            return (
+                <Price>${this.props.price}</Price>
+            )
+        }
+    }
+
     return (
         <ItemThumbnailStyled>
-            <LinkStyled to={props.link}>
-                <Video video={props.video} />
+            <LinkStyled to={this.props.link}>
+                <Video video={this.props.video} />
                 <Title className='itemTitle'>
-                <Heading>{props.heading}</Heading>
-                <Price>${props.price}</Price>
+                <Heading>{this.props.heading}</Heading>
+                
+                {priceCheck()}
                 </Title>
             </LinkStyled>
         </ItemThumbnailStyled>
     )
+}
 }
 
 export default itemThumbnail;

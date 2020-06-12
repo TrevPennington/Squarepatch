@@ -57,23 +57,6 @@ const Price = styled.p`
   }
 `
 
-// const Dropdown = styled.select`
-//   display: block;
-//   padding: 10px;
-//   margin: 10px 0;
-//   background: ${props => props.theme.colors.secondaryAccent};
-//   font-weight: 700;
-//   border: none;
-//   outline: none;
-// `
-// const DropdownOption = styled.option`
-//   padding: 10px;
-//   background: ${props => props.theme.colors.secondaryAccent};
-//   font-weight: 700;
-//   border: none;
-//   outline: none;
-// `
-
 const BuyButton = styled.button`
   padding: 0px;
   margin-top: 5px;
@@ -116,34 +99,79 @@ const FinePrint = styled.p`
   font-size: 0.9em;
   color: #777;
 `
+const Free = styled.p`
+  margin-left: 10px;
+  margin-top: 5px;
+  color: ${props => props.theme.colors.indySecond};
+  font-weight: 600;
+`
+const CodeTitle = styled.h1`
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: -120px;
+  @media (max-width: 900px) {
+    margin-top: 0px;
+  }
+`
+const Code = styled.p`
+  width: 300px;
+  font-size: 14px;
+  margin: auto;
+  background-color: ${props => props.theme.colors.grey};
+  padding: 20px;
+
+  border-radius: 15px;
+  h1 {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+`
+
+
 
 class Item extends React.Component {
-  // state = {
-  //   selected: this.props.data.markdownRemark.frontmatter.customField.values[0].name
-  // }
 
-  // setSelected = (value) => {
-  //   this.setState({ selected: value })
-  // }
 
-  // // create the string required by snipcart to allow price changes based on option chosen
-  // createString = (values) => {
-  //   return values.map(option => {
-  //     const price = option.priceChange >= 0 ? `[+${option.priceChange}]` : `[${option.priceChange}]`
-  //     return `${option.name}${price}`
-  //   }).join('|')
-  // }
-
-  //  // calculate price based on option selected for display on item page
-  // updatePrice = (basePrice, values) => {
-  //   const selectedOption = values.find(option => option.name === this.state.selected)
-  //   return (basePrice + selectedOption.priceChange).toFixed(2)
-    
-  // }
 
   render() {
     const item = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
+
+    let code
+    let priceCheck = () => {
+      if(item.frontmatter.price == 0) {
+        code = ( 
+        <>
+        <CodeTitle>copy and paste the code below, use the instructions found <Link to='/Instructions/blog' style={{ color:'#222', fontWeight:`600`, fontStyle: `italic`, backgroundColor: 'rgba(205,133,63,0.8)', padding: `2px`}}>here</Link></CodeTitle>
+        <Code dangerouslySetInnerHTML={{ __html: item.html }} /> 
+        </>
+        )
+        return (
+          <Free>FREE (scroll down for code)</Free>
+        )
+        
+      } else {
+        return (
+          <PriceContainer>
+            <Price><p>$</p>{item.frontmatter.price}</Price>
+            <BuyButton
+              className='snipcart-add-item'
+              data-item-id={item.frontmatter.id}
+              data-item-file-guid={item.frontmatter.guid}
+              data-item-price={item.frontmatter.price}
+              data-item-name={item.frontmatter.title}
+              data-item-description={item.frontmatter.description}
+              data-item-image={item.frontmatter.image.childImageSharp.fluid.src}
+              data-item-url={"https://www.squarepatch.io/" + item.fields.slug} //REPLACE WITH OWN URL
+              >Add to cart
+            </BuyButton>
+          </PriceContainer>
+        )
+      }
+    }
 
     return (
      
@@ -155,38 +183,19 @@ class Item extends React.Component {
           {/* <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price> */}
           <div class='info'>
             <Heading>{item.frontmatter.title}</Heading>
-            <PriceContainer>
-              <Price><p>$</p>{item.frontmatter.price}</Price>
 
-              {/* <Dropdown
-                id={item.frontmatter.customField.name}
-                onChange={(e) => this.setSelected(e.target.value)}
-                value={this.state.selected}>
-                {item.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
-              </Dropdown> */}
+            {priceCheck()}
 
-              <BuyButton
-                className='snipcart-add-item'
-                data-item-id={item.frontmatter.id}
-                data-item-file-guid={item.frontmatter.guid}
-                data-item-price={item.frontmatter.price}
-                data-item-name={item.frontmatter.title}
-                data-item-description={item.frontmatter.description}
-                data-item-image={item.frontmatter.image.childImageSharp.fluid.src}
-                data-item-url={"https://www.squarepatch.io/" + item.fields.slug} //REPLACE WITH OWN URL
-                // data-item-custom1-name={item.frontmatter.customField ? item.frontmatter.customField.name : null}
-                // data-item-custom1-options={this.createString(item.frontmatter.customField.values)}
-                // data-item-custom1-value={this.state.selected}>
-                >Add to cart
-              </BuyButton>
-            </PriceContainer>
             <p className='description'>{item.frontmatter.description}</p>
             <Breaker></Breaker>
             <FinePrint className='finePrint'>
-            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components. All plugins are non-refundable due to the nature of the product. If you have any problems or questions, please <Link to='/contact' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>contact us!</Link>
+            **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/Instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components. All plugins are non-refundable due to the nature of the product. If you have any problems or questions, please <Link to='/contact' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>contact us!</Link>
             </FinePrint>
           </div>
+
+          
         </div>
+        {code}
       </Layout>
       
     )

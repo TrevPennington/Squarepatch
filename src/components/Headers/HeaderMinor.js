@@ -23,7 +23,6 @@ const Div = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     @media(max-width: 600px) {
         width: 90vw;
     }
@@ -35,7 +34,6 @@ const Home = styled.h1`
     letter-spacing: 5px;
     text-transform: uppercase;
     text-align: left;
-
 `
 
 const Links = styled.div`
@@ -45,7 +43,6 @@ const Links = styled.div`
     justify-content: space-around;
     font-size: 2em;
     letter-spacing: 3px;
-
     & > * {
         font-size: 0.5em;
     }
@@ -69,11 +66,11 @@ const LinkStyled = styled(Link)`
     box-shadow: none;
     text-decoration: none;
     color: inherit;
-
     @media(max-width: 600px) {
-        font-size: 0.3em;
-        margin-right: 3vw;
-        align-self: center;
+        // font-size: 0.3em;
+        // margin-right: 3vw;
+        // align-self: center;
+        display: none;
     }
 `
 
