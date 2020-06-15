@@ -121,10 +121,10 @@ const Footer = () => (
         </SocialStyled>
 
         <Links>
-            <Link to='./'>Plugins</Link>
-            <Link to='./blog'>Blog</Link>
-            <Link to='./contact'>Contact</Link>
-            <Link to='./about'>About</Link>
+            <Link to='/'>Plugins</Link>
+            <Link to='/blog'>Blog</Link>
+            <Link to='/contact'>Contact</Link>
+            <Link to='/about'>About</Link>
         </Links>
         <CreatorStyled>
             <h1>© Squarepatch Designs {currentDate.getFullYear()}</h1>
