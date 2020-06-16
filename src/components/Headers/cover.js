@@ -1,23 +1,25 @@
 import React from "react";
 import styled from "styled-components";
+import Banner from "./banner.js"
 
 
 const Cover = styled.div`
     height: 15rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     @media(max-width: 900px) {
-        align-items: flex-start;
-        height: 7.5rem;
+        
+        
     }
 `
 
 const Square = styled.div`
-
+    margin-top: 40px;
     & > * {
-        background-color: ${props => props.theme.colors.indyMain};
+        // background-color: ${props => props.theme.colors.indyMain};
         padding: 20px;
     }
 `
@@ -41,6 +43,7 @@ export default () => {
         <Square>
             <Tag>clean and simple <em style={{ fontWeight: `600`, borderBottom: `2px solid peru`}}>Squarespace</em> plugins to make your site unique.</Tag>
         </Square>
+        <Banner />
     </Cover>
   )
 }

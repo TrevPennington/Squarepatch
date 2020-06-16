@@ -3,11 +3,12 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 
 
+
 import { ShoppingBag } from 'styled-icons/boxicons-regular/ShoppingBag';
 
 const HeaderMinorStyled = styled.div`
+    position: sticky;    
     top: 0;
-    position: sticky;
     box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
     width: 100%;
     margin: auto;
@@ -86,7 +87,7 @@ const CartSummary = styled.div`
 const ItemCount = styled.p`
     width: 27px;
     border: 1px solid peru;
-    border-radius: 100%;
+    border-radius: 50%;
     background-color: peru;
     text-align: center;
     font-size: 1em;
