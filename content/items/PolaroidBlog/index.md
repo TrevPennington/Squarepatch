@@ -9,6 +9,6 @@ price: 5
 image: ./mongoose.jpg
 description: Polaroid style for blog collections. Customize the background color to anything you'd like! Available for both Squarespace 7.0 & 7.1 official templates. Summary layout > grid style for best performance.
 
-video: ./PolaroidBlog.mp4
+video: ./slowPolaroid.mp4
 
 ---

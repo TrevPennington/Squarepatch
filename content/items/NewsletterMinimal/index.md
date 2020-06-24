@@ -9,7 +9,7 @@ price: 5
 image: ./mongoose.jpg
 description: Minimalist newsletter signup option. Available for both Squarespace 7.0 & 7.1 official templates.
 
-video: ./Newsletter02.mp4
+video: ./NewsletterMinimal.mp4
 ---
 
 This is a gif

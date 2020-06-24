@@ -7,15 +7,15 @@ const VideoStyled = styled.div `
     border: none;
 `
 
-const Video = ({ video }) => (
+const Video = ({ video, size }) => (
     <VideoStyled>
         <video
             src={video}
             playsinline='playsinline'
             autoplay='autoplay'
             loop='true'
-            width="330" 
-            height="330" 
+            width={size}
+            height={size}
             scrolling='no'
            
             loading='lazy'

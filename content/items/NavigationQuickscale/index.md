@@ -9,7 +9,7 @@ price: 0
 image: ./mongoose.jpg
 description: Interactive hover for navigation items. Available for both Squarespace 7.0 & 7.1 official templates.
 
-video: ./nav02quickscale.mp4
+video: ./navigationQuickscale.mp4
 
 ---
 

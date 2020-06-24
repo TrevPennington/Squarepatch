@@ -10,7 +10,8 @@ import SEO from "../components/seo"
 import { Helmet } from "react-helmet"
 
 const ThumbnailsWrapper = styled.div`
-    width: 100%;
+    width: 90%;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -9,7 +9,7 @@ price: 5
 image: ./mongoose.jpg
 description: Modern styling and interactive hover for user-built Squarespace forms. Available for both Squarespace 7.0 & 7.1 official templates.
 
-video: ./Form01.mp4
+video: ./minimalForm.mp4
 
 ---
 

@@ -6,7 +6,7 @@ import Video from "../video"
 
 const ItemThumbnailStyled = styled.div`
     box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
-    border-radius: 15px;
+    border-radius: 10px;
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -17,14 +17,9 @@ const ItemThumbnailStyled = styled.div`
     transition-duration: .15s;
 
     &:hover {
-    // transform: scale(1.01);
+    // transform: scale(.99);
     box-shadow: 1px 1px 40px rgba(0,0,0,.15);
     transition-duration: .15s;
-
-    .itemTitle {
-        background-color: ${props => props.theme.colors.indySplashLight};
-        color: ${props => props.theme.colors.text};
-    }
 `
 
 const Heading = styled.h3`
@@ -81,8 +76,8 @@ const Title = styled.div`
     flex-direction: column nowrap;
     align-items: center;
     justify-content: space-between;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-color: ${props => props.theme.colors.pastel};
     color: ${props => props.theme.colors.text};
 `
@@ -104,7 +99,7 @@ render() {
     return (
         <ItemThumbnailStyled>
             <LinkStyled to={this.props.link}>
-                <Video video={this.props.video} />
+                <Video video={this.props.video} size="330" />
                 <Title className='itemTitle'>
                 <Heading>{this.props.heading}</Heading>
                 

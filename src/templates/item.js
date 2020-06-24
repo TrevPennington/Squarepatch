@@ -1,13 +1,23 @@
-// This is the template for each programmatically generated item in the shop. It will be populated with data from markdown files in the content folder.
-
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { graphql, Link } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components"
 import Video from "../components/video"
-import './item.css'
 
 import Layout from "../components/layout";
+
+const ItemContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
+  @media(max-width: 900px) {
+    flex-direction: column;
+    width: 90%;
+  }
+`
 
 const Heading = styled.h1`
   font-style: italic;
@@ -18,14 +28,44 @@ const Heading = styled.h1`
 
   text-align: left;
   width: 100%;
-  min-height: 45px;
+  
   margin: auto;
 `
 
+const Info = styled.div`
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  
+  @media(max-width: 900px) {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    
+    justify-self: center;
+  }
+`
+
+const Description = styled.p`
+  padding: 10px;
+  height: auto;
+  width: 100%;
+`
+
 const Shadow = styled.div`
+  // box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
+  // width: 100%;
+  // height: 350px;
   box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
-  height: 350px;
   margin-top: 50px;
+  align-self: start;
+  @media(max-width: 900px) {
+    align-self: center;
+    margin-top: 0px;
+    box-shadow: none;
+    border-bottom: 1px solid #efefef;
+  }
+
 `
 
 const ImgStyled = styled(Img)`
@@ -123,7 +163,7 @@ const Code = styled.p`
   background-color: ${props => props.theme.colors.grey};
   padding: 20px;
 
-  border-radius: 15px;
+  border-radius: 10px;
   h1 {
     font-size: 1.2em;
     font-weight: 600;
@@ -132,13 +172,25 @@ const Code = styled.p`
 
 
 
-class Item extends React.Component {
+function Item(props) {
 
+    const [width, setWidth] = useState("330");
 
+    const checkWidth = () => {
+      if(window.innerWidth >= '900px') {
+        setWidth("450")
+      } else {
+        setWidth("330")
+      }
+    }
 
-  render() {
-    const item = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    useEffect(() => {
+      checkWidth();
+      window.addEventListener('resize', checkWidth())
+    });
+
+    const item = props.data.markdownRemark
+    const siteTitle = props.data.site.siteMetadata.title
 
     let code
     let priceCheck = () => {
@@ -175,32 +227,32 @@ class Item extends React.Component {
 
     return (
      
-      <Layout location={this.props.location} title={siteTitle}>
-        <div className='itemContainer'>
-          <Shadow className='shadow'>
-            <Video video={item.frontmatter.video.publicURL} className='video' />
+      <Layout location={props.location} title={siteTitle}>
+        <ItemContainer>
+          <Shadow>
+            <Video video={item.frontmatter.video.publicURL} size={width} />
           </Shadow>
           {/* <Price>£{this.updatePrice(item.frontmatter.price, item.frontmatter.customField.values)}</Price> */}
-          <div class='info'>
+          <Info>
             <Heading>{item.frontmatter.title}</Heading>
 
             {priceCheck()}
 
-            <p className='description'>{item.frontmatter.description}</p>
+            <Description>{item.frontmatter.description}</Description>
             <Breaker></Breaker>
             <FinePrint className='finePrint'>
             **Purchase includes file with code and license for use with one website. Easy to install instructions can be found <Link to='/Instructions/blog' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>here</Link>. For Squarespace official templates only. May not work with third-party templates or in conjunction with other plugins that affect the same components. All plugins are non-refundable due to the nature of the product. If you have any problems or questions, please <Link to='/contact' style={{ color:'#222', fontWeight:`500`, fontStyle: `italic`}}>contact us!</Link>
             </FinePrint>
-          </div>
+          </Info>
 
           
-        </div>
+        </ItemContainer>
         {code}
       </Layout>
       
     )
   }
-}
+
 
 export default Item;
 

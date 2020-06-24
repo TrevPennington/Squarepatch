@@ -9,6 +9,6 @@ price: 5
 image: ./mongoose.jpg
 description: Interactive scale for blog images on hover. Available for both Squarespace 7.0 & 7.1 official templates.
 
-video: ./blogscaleInner.mp4
+video: ./blogImageHover.mp4
 
 ---

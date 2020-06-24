@@ -17,7 +17,7 @@ export const theme = {
         highlight: 'antiquewhite',
         highlighter: 'rgba(107, 142, 35, 0.6)',
 
-        pastel: 'rgba(0,0,0,0.08)',
+        pastel: 'rgba(0,0,0,0.06)',
         pastelight: 'rgba(100,0,0,0.4)',
 
         grey: 'rgba(0,0,0,0.03)',
