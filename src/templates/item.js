@@ -170,6 +170,10 @@ const Code = styled.p`
   }
 `
 
+const Bottom = styled.div`
+  height: 100px;
+`
+
 
 
 function Item(props) {
@@ -248,6 +252,7 @@ function Item(props) {
           
         </ItemContainer>
         {code}
+        <Bottom></Bottom>
       </Layout>
       
     )

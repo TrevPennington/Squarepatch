@@ -52,8 +52,8 @@ const ImgStyled = styled.img`
 
 const Price = styled.p`
     text-align: center;
-    font-weight: 300;
-    font-size: .9em;
+    font-weight: 500;
+    font-size: 1.2em;
     padding-right: 10%;
     letter-spacing: 2px;
 `
@@ -61,6 +61,7 @@ const Free = styled(Price)`
     color: ${props => props.theme.colors.indySecond};
     font-weight: 600;
     font-size: 1.2em;
+    padding-right: 10px;
 `
 
 const Title = styled.div`
@@ -87,7 +88,7 @@ render() {
     let priceCheck = () => {
         if(this.props.price == 0) {
             return (
-                <Free>FREE</Free>
+                <Free>FREE!</Free>
             )
         } else {
             return (

@@ -6,6 +6,7 @@
   "author": "Trevor Pennington",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
+    "bootstrap": "^4.5.0",
     "gatsby": "^2.19.40",
     "gatsby-cli": "^2.10.10",
     "gatsby-image": "^2.2.43",

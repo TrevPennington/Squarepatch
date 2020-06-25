@@ -1,0 +1,21 @@
+.bagFull {
+    margin: auto;
+    margin-top: -14px;
+    margin-right: 14px;
+    border: 2px solid orange;
+    border-radius: 100%;
+    background-color: orange;
+    width: 5px;
+    height: 5px;
+}
+
+.bagEmpty {
+    margin: auto;
+    margin-top: -14px;
+    margin-right: 14px;
+    border: 1px solid white;
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}

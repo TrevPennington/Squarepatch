@@ -1,25 +1,26 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-
-
-
 import { ShoppingBag } from 'styled-icons/boxicons-regular/ShoppingBag';
+import './nav.css'
 
 const HeaderMinorStyled = styled.div`
     position: sticky;    
     top: 0;
     box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
     width: 100%;
+
     margin: auto;
-    padding-top: 6px;
-    padding-bottom: 6px;
+
     z-index: 99;
     background-color: white;
+  
+
 `
 
 const Div = styled.div`
     width: 75vw;
+    height: 70px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -47,7 +48,7 @@ const Links = styled.div`
     & > * {
         font-size: 0.5em;
     }
-    @media(max-width: 600px) {
+    @media(max-width: 900px) {
         justify-content: flex-end;
     }
 `
@@ -67,7 +68,7 @@ const LinkStyled = styled(Link)`
     box-shadow: none;
     text-decoration: none;
     color: inherit;
-    @media(max-width: 600px) {
+    @media(max-width: 900px) {
         // font-size: 0.3em;
         // margin-right: 3vw;
         // align-self: center;
@@ -76,24 +77,12 @@ const LinkStyled = styled(Link)`
 `
 
 const CartSummary = styled.div`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 30px;
-    padding-top: 3px;
+    margin-bottom: 15px;
+ 
 `
 
 const ItemCount = styled.p`
-    width: 27px;
-    border: 1px solid peru;
-    border-radius: 50%;
-    background-color: peru;
-    text-align: center;
-    font-size: 1em;
-    color: whitesmoke;
-    transform: translateY(-15px);
-    z-index: 999;
+    
 `
 
 class HeaderMinor extends Component {
@@ -135,6 +124,26 @@ class HeaderMinor extends Component {
     
 
     render() {
+      
+        let cart = () => { if(this.state.items) { //if cart has an item in it
+            return ( 
+            <CartSummary className="snipcart-summary">
+                <a href="#" className="snipcart-checkout"> 
+                <ShoppingBag size='33px' />
+                <ItemCount className='bagFull'></ItemCount>
+                </a>
+            </CartSummary>
+        ) } else { //if cart is empty
+            return (
+            <CartSummary className="snipcart-summary">
+            <a href="#" className="snipcart-checkout"> 
+            <ShoppingBag size='33px' />
+            <ItemCount className='bagEmpty'></ItemCount>
+            </a>
+        </CartSummary>
+            )
+        }}
+
         return (
             <HeaderMinorStyled headSize={this.props.font} background={this.props.background}>
                 <Div>
@@ -152,15 +161,9 @@ class HeaderMinor extends Component {
                         <LinkStyled to='/about'>
                             <p>ABOUT</p>
                         </LinkStyled>
-                    
-                
 
-                        <CartSummary className="snipcart-summary">
-                            <a href="#" className="snipcart-checkout"> 
-                            <ShoppingBag size='40px' color='#555' />
-                            <ItemCount className='itemCount'>{this.state.items}</ItemCount>
-                            </a>
-                        </CartSummary>
+                        {cart()}
+
                     </Links>
 
                 </Div>
@@ -172,3 +175,4 @@ class HeaderMinor extends Component {
 }
 
 export default HeaderMinor;
+
