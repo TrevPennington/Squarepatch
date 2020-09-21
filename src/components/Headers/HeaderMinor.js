@@ -13,15 +13,17 @@ const HeaderMinorStyled = styled.div`
     margin: auto;
 
     z-index: 99;
-    background-color: white;
+    background-color: darkslategrey;
+    padding-top: -2px;
   
 
 `
 
 const Div = styled.div`
     width: 75vw;
-    height: 70px;
+    height: 90px;
     margin: auto;
+    padding-top: -10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +33,7 @@ const Div = styled.div`
 `
 
 const Home = styled.h1`
-    
+    color: #efefef;
     font-size: 1.4em;
     letter-spacing: 5px;
     text-transform: uppercase;
@@ -43,6 +45,7 @@ const Links = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    color: #efefef;
     font-size: 2em;
     letter-spacing: 3px;
     & > * {

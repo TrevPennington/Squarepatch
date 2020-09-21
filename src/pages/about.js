@@ -6,12 +6,13 @@ import styled from "styled-components";
 import Img from "gatsby-image"
 
 
-const info = 'Squarepatch was born out of a desire to brand Squarespace websites beyond the standard templates. We believe all websites owners should be able to customize styles to their liking. We welcome all suggestions for plugins and love creating custom style plugins for all who ask!'
+const info = 'Squarepatch exists to brand Squarespace websites above and beyond the standard templates. We believe all website owners should be able to customize the style of our plugins to fit their branding. We welcome all suggestions for plugins and love creating custom style plugins for all who ask!'
 
 const Title = styled.h1`
     width: auto;
     margin: auto;
     height: 15vh;
+    margin-top: 90px;
     text-align: center;
     
     font-size: 2em;
@@ -24,6 +25,7 @@ const Image = styled(Img)`
     width: 50vw;
     max-width: 400px;
     margin: auto;
+    margin-bottom: 120px;
 `
 
 const Info = styled.p`
