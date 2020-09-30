@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import styled from "styled-components";
-import "./contact.css";
+import "../components/Headers/contact.css";
 import SEO from "../components/seo"
 
 const infoTitle = 'Questions / Comments / Concerns'

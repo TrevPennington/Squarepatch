@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const BannerWrapper = styled.div`
-    
+    width: 100%;
     margin: auto;
+    margin-top: 0;
 `
 
 const BannerText = styled.p`
@@ -12,12 +13,12 @@ const BannerText = styled.p`
     letter-spacing: 0.8px;
     margin: auto;
     width: auto;
-    //border: 1px solid green;
     background-color: ${props => props.theme.colors.pastel};
     box-shadow: .5px .5px 20px rgba(0,0,0,.15);
-    padding: 4px;
+    padding: 15px;
     padding-left: 10px;
     padding-right: 10px;
+    color: #555;
 `
 
 export default () => {

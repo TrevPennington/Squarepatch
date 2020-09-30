@@ -6,20 +6,21 @@ import Video from "../video"
 
 const ItemThumbnailStyled = styled.div`
     box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
-    border-radius: 10px;
-    width: 350px;
+    width: 450px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px;
+    margin: 5px;
+
     background: transparent;
     transition-duration: .15s;
 
     &:hover {
-    // transform: scale(.99);
-    box-shadow: 1px 1px 40px rgba(0,0,0,.15);
-    transition-duration: .15s;
+
+    opacity: 0.8;
+
 `
 
 const Heading = styled.h3`
@@ -32,6 +33,7 @@ const Heading = styled.h3`
 
 const LinkStyled = styled(Link)`
     width: 100%;
+    height: 100%;
     box-shadow: none;
     text-decoration: none;
     color: inherit;
@@ -64,22 +66,28 @@ const Free = styled(Price)`
     padding-right: 10px;
 `
 
+const VidContainer = styled.div`
+      justify-self: center;
+
+      margin: auto;
+`
+
 const Title = styled.div`
-    letter-spacing: 1.5px;
     
+    letter-spacing: 1.5px;
     font-style: italic;
     font-size: 0.8em;
     text-transform: uppercase;
+      
+    width: 100%;
+ 
 
-    width: 350px;
-    height: 50px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column nowrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: ${props => props.theme.colors.pastel};
+  
     color: ${props => props.theme.colors.text};
 `
 
@@ -100,11 +108,12 @@ render() {
     return (
         <ItemThumbnailStyled>
             <LinkStyled to={this.props.link}>
-                <Video video={this.props.video} size="330" />
+                <VidContainer>
+                    <Video video={this.props.video} size="300" />
+                </VidContainer>
                 <Title className='itemTitle'>
-                <Heading>{this.props.heading}</Heading>
-                
-                {priceCheck()}
+                    <Heading>{this.props.heading}</Heading>
+                    {priceCheck()}
                 </Title>
             </LinkStyled>
         </ItemThumbnailStyled>

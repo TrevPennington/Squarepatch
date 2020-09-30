@@ -6,12 +6,10 @@ import './nav.css'
 
 const HeaderMinorStyled = styled.div`
     position: sticky;    
-    top: 0;
+    top: -1px;
     box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
     width: 100%;
-
     margin: auto;
-
     z-index: 99;
     background-color: darkslategrey;
     padding-top: -2px;

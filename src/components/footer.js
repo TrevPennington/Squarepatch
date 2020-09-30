@@ -108,6 +108,11 @@ const CreatorStyled = styled.div`
         font-size: 0.8em;
         color: #888;
         letter-spacing: 1px;
+
+        @media(max-width: 900px) {
+            font-size: 0.5em;
+            line-height: 15px;
+        }
     }
 `
 
@@ -127,8 +132,8 @@ const Footer = () => (
             <Link to='/about'>About</Link>
         </Links>
         <CreatorStyled>
-            <h1>© Squarepatch Designs {currentDate.getFullYear()}</h1>
-            <h1>created by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></h1>
+            <h1>© Squarepatch {currentDate.getFullYear()}</h1>
+            <h1>by <a href="https://www.trevorpennington.com" style={{ fontStyle: `italic`}}>Trevor Pennington</a></h1>
         </CreatorStyled>
 
 
