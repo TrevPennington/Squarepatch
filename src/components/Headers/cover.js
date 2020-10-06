@@ -4,7 +4,7 @@ import Banner from "./banner.js"
 
 
 const Cover = styled.div`
-    height: 200px;
+    height: 400px;
     width: 100%;
     @media(max-width: 900px) {
         height: 250px;
@@ -13,7 +13,7 @@ const Cover = styled.div`
 `
 
 const Square = styled.div`
-    margin-top: 50px;
+    margin-top: 150px;
 
 `
 const Tag = styled.h5`

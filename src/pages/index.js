@@ -17,6 +17,7 @@ const ThumbnailsWrapper = styled.div`
     justify-content: center;
     flex-wrap: wrap;
     padding: 2px;
+    margin-bottom: 150px;
 `
 
 class BlogIndex extends React.Component {

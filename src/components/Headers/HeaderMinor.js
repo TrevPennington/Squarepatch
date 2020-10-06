@@ -13,8 +13,6 @@ const HeaderMinorStyled = styled.div`
     z-index: 99;
     background-color: darkslategrey;
     padding-top: -2px;
-  
-
 `
 
 const Div = styled.div`
