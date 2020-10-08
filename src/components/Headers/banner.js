@@ -4,7 +4,10 @@ import styled from 'styled-components';
 const BannerWrapper = styled.div`
     width: 100%;
     margin: auto;
-    margin-top: 0;
+    height: 50px;
+    @media(max-width: 900px) {
+        height: 100px;
+    }
 `
 
 const BannerText = styled.p`
@@ -13,8 +16,6 @@ const BannerText = styled.p`
     letter-spacing: 0.8px;
     margin: auto;
     width: auto;
-    background-color: ${props => props.theme.colors.pastel};
-    box-shadow: .5px .5px 20px rgba(0,0,0,.15);
     padding: 15px;
     padding-left: 10px;
     padding-right: 10px;

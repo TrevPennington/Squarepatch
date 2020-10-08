@@ -1,39 +1,47 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import Banner from "./banner.js";
 import { ShoppingBag } from 'styled-icons/boxicons-regular/ShoppingBag';
 import './nav.css'
 
 const HeaderMinorStyled = styled.div`
-    position: sticky;    
-    top: -1px;
+    position: sticky; 
+    top: -55px;
     box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
     width: 100%;
     margin: auto;
     z-index: 99;
-    background-color: darkslategrey;
     padding-top: -2px;
+    background-color: cornsilk;
+
+    @media(max-width: 900px) {
+        top: -105px;
+    }
 `
 
 const Div = styled.div`
-    width: 75vw;
+
+    width: 100%;
     height: 90px;
     margin: auto;
+    padding-left: 20vw;
+    padding-right: 20vw;
     padding-top: -10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media(max-width: 600px) {
-        width: 90vw;
+    background-color: ${props => props.theme.colors.text};
+    @media(max-width: 450px) {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 `
 
 const Home = styled.h1`
     color: #efefef;
     font-size: 1.4em;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    text-align: left;
+    letter-spacing: 3px;
 `
 
 const Links = styled.div`
@@ -56,11 +64,7 @@ const LinkHome = styled(Link)`
     box-shadow: none;
     text-decoration: none;
     color: inherit;
-    @media(max-width: 600px) {
-        font-size: 0.6em;
-        font-weight: 400;
-        align-self: center;
-    }
+
 `
 
 const LinkStyled = styled(Link)`
@@ -144,8 +148,9 @@ class HeaderMinor extends Component {
         }}
 
         return (
-            <HeaderMinorStyled headSize={this.props.font} background={this.props.background}>
-                <Div>
+            <HeaderMinorStyled headSize={this.props.font}>
+                <Banner style={{backgroundColor: `white`}}/>
+                <Div background={this.props.background}>
                     <Home>
                         <LinkHome to='/'>
                             Squarepatch
@@ -154,11 +159,11 @@ class HeaderMinor extends Component {
 
                     <Links>
                         <LinkStyled to='/blog'>
-                            <p>BLOG</p>
+                            <p>blog</p>
                         </LinkStyled>
 
                         <LinkStyled to='/about'>
-                            <p>ABOUT</p>
+                            <p>about</p>
                         </LinkStyled>
 
                         {cart()}
