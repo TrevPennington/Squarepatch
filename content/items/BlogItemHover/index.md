@@ -11,3 +11,26 @@ description: Interactive scale for blog items on hover. Available for both Squar
 
 video: ./BlogScale.mp4
 ---
+## - version 7.0
+```css
+.summary-item:hover {
+    transform: scale(1.01);
+    transition-duration: 0.2s;
+}
+
+.summary-item {
+  transition-duration: 0.2s;
+}
+```
+
+## - version 7.0
+```css
+.blog-item:hover {
+  transform: scale(1.01)!important;
+  transition-duration: 0.2s;
+}
+
+.blog-item {
+transition-duration: 0.2s;
+}
+```

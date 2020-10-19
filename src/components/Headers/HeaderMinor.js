@@ -7,23 +7,22 @@ import './nav.css'
 
 const HeaderMinorStyled = styled.div`
     position: sticky; 
-    top: -55px;
-    box-shadow: 1px 1px 40px rgba(0,0,0,0.1);
+    top: -1px;
+    box-shadow: 1px 1px 40px rgba(0,0,0,0.25);
     width: 100%;
     margin: auto;
     z-index: 99;
-    padding-top: -2px;
     background-color: cornsilk;
 
     @media(max-width: 900px) {
-        top: -105px;
+       
     }
 `
 
 const Div = styled.div`
 
     width: 100%;
-    height: 90px;
+    height: 70px;
     margin: auto;
     padding-left: 20vw;
     padding-right: 20vw;
@@ -31,7 +30,7 @@ const Div = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ${props => props.theme.colors.text};
+    background-color: ${props => props.theme.colors.blk};
     @media(max-width: 450px) {
         padding-left: 15px;
         padding-right: 15px;
@@ -42,14 +41,15 @@ const Home = styled.h1`
     color: #efefef;
     font-size: 1.4em;
     letter-spacing: 3px;
+    font-weight: 500;
 `
 
 const Links = styled.div`
-    width: 300px;
+    width: 150px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: #efefef;
+    color: ${props => props.theme.colors.main};
     font-size: 2em;
     letter-spacing: 3px;
     & > * {
@@ -75,6 +75,13 @@ const LinkStyled = styled(Link)`
         // font-size: 0.3em;
         // margin-right: 3vw;
         // align-self: center;
+        display: none;
+    }
+`
+
+const Line = styled.p`
+    color: ${props => props.theme.colors.grey2};
+    @media(max-width: 900px) {
         display: none;
     }
 `
@@ -149,7 +156,7 @@ class HeaderMinor extends Component {
 
         return (
             <HeaderMinorStyled headSize={this.props.font}>
-                <Banner style={{backgroundColor: `white`}}/>
+                
                 <Div background={this.props.background}>
                     <Home>
                         <LinkHome to='/'>
@@ -162,11 +169,11 @@ class HeaderMinor extends Component {
                             <p>blog</p>
                         </LinkStyled>
 
+                        <Line>/</Line>
+
                         <LinkStyled to='/about'>
                             <p>about</p>
                         </LinkStyled>
-
-                        {cart()}
 
                     </Links>
 

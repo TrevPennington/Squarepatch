@@ -12,16 +12,17 @@ description: Change all links within text on your website to underlines and anim
 video: ./LinkHoverSquarepatch.mp4
 
 ---
-#For both 7.0 & 7.1 templates
-<br />
-@color: #FFA500; //change this hex to anything you'd like. Keep the semi colon at the end.
+## version - 7.0 & 7.1
+```css
+@linkColor: #FFA500; //change this hex to anything you'd like. Keep the semi colon afterwards.
 
-\#page p > a {
-      transition: box-shadow .5s ;
-    box-shadow: inset 0 -7px 0 0 @color;
+#page p > a {
+  transition: box-shadow .5s;
+  box-shadow: inset 0 -7px 0 0 @linkColor;
 }
 
-\#page p > a:hover {
-  box-shadow: inset 0 -40px 0 0 @color;
+#page p > a:hover {
+  box-shadow: inset 0 -40px 0 0 @linkColor;
   transition: box-shadow .2s cubic-bezier(1,.05,.75,.25);
 }
+```

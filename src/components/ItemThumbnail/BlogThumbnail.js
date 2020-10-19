@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components"
 import { Link } from "gatsby";
-// import Video from "../video"
-// import Gif from "../gif"
-
 
 const ItemThumbnailStyled = styled.div`
     box-shadow: 1px 1px 40px rgba(0,0,0,0.08);
@@ -29,8 +26,6 @@ const ItemThumbnailStyled = styled.div`
 
     }
 `
-
-
 
 const LinkStyled = styled(Link)`
     width: 100%;

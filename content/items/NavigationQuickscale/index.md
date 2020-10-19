@@ -12,10 +12,8 @@ description: Interactive hover for navigation items. Available for both Squaresp
 video: ./navigationQuickscale.mp4
 
 ---
-
-#For 7.0 templates:
-<br />
-
+## version - 7.0
+```css
 .main-nav a {
   transition: 0.3s;
 }
@@ -24,12 +22,9 @@ video: ./navigationQuickscale.mp4
   transform: scale(1.08);
   transition: 0.3s;
 }
-
-<br />
-
-#For 7.1 templates:
-<br />
-
+```
+## version - 7.1
+```css
 .header-nav-list a {
   transition: 0.3s;
 }
@@ -38,3 +33,4 @@ video: ./navigationQuickscale.mp4
   transform: scale(1.08);
   transition: 0.3s;
 }
+```

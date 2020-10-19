@@ -12,3 +12,19 @@ description: Button shadow for all Squarespace buttons (small, medium, large). C
 video: ./ButtonShadowSquarepatch.mp4
 
 ---
+## - version 7.0 & 7.1
+```css
+@spcolor1: #FFDFD3; //change me! any hex or rgb color will do. leave the semi colon!
+
+.sqs-block-button-element {
+  box-shadow: 10px 15px @spcolor1;
+  transition: all 0.3s !important;
+}
+
+.sqs-block-button-element:hover {
+  box-shadow: 5px 10px @spcolor1;
+  opacity: 1!important;
+  transition: all 0.3s !important;
+  color: @spcolor1!important;
+}
+```

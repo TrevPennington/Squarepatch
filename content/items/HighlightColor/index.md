@@ -12,3 +12,11 @@ description: Change the highlight color of all text on your website to match you
 video: ./HighlightColorSquarepatch.mp4
 
 ---
+## - version 7.0 & 7.1
+```css
+@highlightColor: #ffdb58; //change this hex to anything you'd like. Keep the semi colon afterwards.
+
+h1::selection, h2::selection, h3::selection, h4::selection, p::selection, a::selection { 
+    background-color: @highlightColor; 
+}
+```

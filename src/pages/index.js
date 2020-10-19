@@ -63,7 +63,12 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(items)/"  }}) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(items)/"  }}
+    sort: {
+      fields: [frontmatter___title]
+      order: ASC
+    }
+    ) {
       edges {
         node {
           excerpt

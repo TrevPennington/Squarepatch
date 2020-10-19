@@ -8,7 +8,7 @@ import { RightArrowAlt } from 'styled-icons/boxicons-regular/RightArrowAlt'
 const FooterStyled = styled.div`
     width: 100%;
     height: 25vh;
-    background-color: ${props => props.theme.colors.text};
+    background-color: ${props => props.theme.colors.blk};
     text-align: center;
 
     font-size: 0.9em;
@@ -121,7 +121,7 @@ const currentDate = new Date();
 const Footer = () => (
     <FooterStyled>
         <SocialStyled>
-            <a href='https://www.pinterest.com/thepenningtonco/web-design/' style={{width:"30px"}}><Pinterest size="30px"/></a>
+            <a href='https://www.pinterest.com/thepenningtonco/web-design/' target="_blank" style={{width:"30px"}}><Pinterest size="30px"/></a>
             {/* <a href='#' style={{width:"30px"}}><YoutubeStyled size="30" /></a> */}
         </SocialStyled>
 

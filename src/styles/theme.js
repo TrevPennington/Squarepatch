@@ -21,6 +21,9 @@ export const theme = {
         pastelight: 'rgba(100,0,0,0.4)',
 
         grey: 'rgba(0,0,0,0.03)',
+        grey2: `rgba(239, 239, 239, 0.5)`,
+        darkGrey: `rgba(51, 51, 51, 0.5)`,
+        blk: `#222`,
 
         cover: '#efefef',
         

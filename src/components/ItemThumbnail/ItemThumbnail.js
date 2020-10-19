@@ -13,7 +13,6 @@ const ItemThumbnailStyled = styled.div`
     align-items: center;
     justify-content: center;
     margin: 5px;
-
     background: transparent;
     transition-duration: .15s;
 
@@ -43,29 +42,6 @@ const LinkStyled = styled(Link)`
     justify-content: center;
 `
 
-const ImgStyled = styled.img`
-    width: auto;
-    height: 350px;
-
-    @media (max-width: 930px) {
-        height: 250px;
-      }
-`
-
-const Price = styled.p`
-    text-align: center;
-    font-weight: 500;
-    font-size: 1.2em;
-    padding-right: 10%;
-    letter-spacing: 2px;
-`
-const Free = styled(Price)`
-    color: ${props => props.theme.colors.indySecond};
-    font-weight: 600;
-    font-size: 1.2em;
-    padding-right: 10px;
-`
-
 const VidContainer = styled.div`
       justify-self: center;
 
@@ -76,34 +52,21 @@ const Title = styled.div`
     
     letter-spacing: 1.5px;
     font-style: italic;
-    font-size: 0.8em;
+    font-size: 0.75em;
+    color: ${props => props.theme.colors.darkGrey};
     text-transform: uppercase;
       
     width: 100%;
  
-
     margin-bottom: 10px;
     display: flex;
     flex-direction: column nowrap;
     align-items: flex-end;
     justify-content: space-between;
-  
-    color: ${props => props.theme.colors.text};
 `
 
 class itemThumbnail extends React.Component {
 render() {
-    let priceCheck = () => {
-        if(this.props.price == 0) {
-            return (
-                <Free>FREE!</Free>
-            )
-        } else {
-            return (
-                <Price>${this.props.price}</Price>
-            )
-        }
-    }
 
     return (
         <ItemThumbnailStyled>
@@ -113,7 +76,6 @@ render() {
                 </VidContainer>
                 <Title className='itemTitle'>
                     <Heading>{this.props.heading}</Heading>
-                    {priceCheck()}
                 </Title>
             </LinkStyled>
         </ItemThumbnailStyled>
